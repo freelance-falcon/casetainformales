@@ -6,8 +6,8 @@ const CASETA = {
   nombre: "Los Informales",
   lema: "La caseta de los amigos",
   // Fecha de inicio de la feria (para la cuenta atrás)
-  inicioFeria: "2026-08-21T22:00:00",
-  finFeria: "2026-08-29T23:59:00",
+  inicioFeria: "2026-09-16T22:00:00",
+  finFeria: "2026-09-20T23:59:00",
   ubicacion: {
     texto: "Recinto Ferial · Calle del Medio, Caseta nº 12",
     mapsUrl: "https://maps.google.com/?q=Recinto+Ferial",
@@ -61,8 +61,8 @@ const PATROCINADORES = [
 /* Programa: un bloque por día, con eventos ordenados por hora */
 const PROGRAMA = [
   {
-    dia: "Viernes 21",
-    fecha: "2026-08-21",
+    dia: "Miércoles 16",
+    fecha: "2026-09-16",
     eventos: [
       { hora: "22:00", nombre: "Pregón y encendido del alumbrado", tipo: "acto" },
       { hora: "23:00", nombre: "Grupo Alborea", tipo: "directo" },
@@ -70,67 +70,38 @@ const PROGRAMA = [
     ],
   },
   {
-    dia: "Sábado 22",
-    fecha: "2026-08-22",
+    dia: "Jueves 17",
+    fecha: "2026-09-17",
     eventos: [
       { hora: "14:00", nombre: "Paella de apertura para socios", tipo: "comida" },
       { hora: "22:30", nombre: "Sur y Compás (sevillanas)", tipo: "directo" },
+    ],
+  },
+  {
+    dia: "Viernes 18",
+    fecha: "2026-09-18",
+    eventos: [
+      { hora: "13:30", nombre: "Día de las familias · juegos para peques", tipo: "acto" },
+      { hora: "22:30", nombre: "Trío Albahaca", tipo: "directo" },
       { hora: "01:30", nombre: "DJ Curro", tipo: "dj" },
     ],
   },
   {
-    dia: "Domingo 23",
-    fecha: "2026-08-23",
-    eventos: [
-      { hora: "13:30", nombre: "Día de las familias · juegos para peques", tipo: "acto" },
-      { hora: "21:30", nombre: "Trío Albahaca", tipo: "directo" },
-    ],
-  },
-  {
-    dia: "Lunes 24",
-    fecha: "2026-08-24",
+    dia: "Sábado 19",
+    fecha: "2026-09-19",
     eventos: [
       { hora: "14:00", nombre: "Concurso de tortillas", tipo: "comida" },
-      { hora: "22:30", nombre: "Noche de karaoke", tipo: "acto" },
-    ],
-  },
-  {
-    dia: "Martes 25",
-    fecha: "2026-08-25",
-    eventos: [
-      { hora: "22:30", nombre: "Cuarteto La Marea", tipo: "directo" },
-    ],
-  },
-  {
-    dia: "Miércoles 26",
-    fecha: "2026-08-26",
-    eventos: [
-      { hora: "14:00", nombre: "Arroz del hermanamiento (caseta invitada)", tipo: "comida" },
-      { hora: "22:30", nombre: "Dúo Salitre", tipo: "directo" },
-    ],
-  },
-  {
-    dia: "Jueves 27",
-    fecha: "2026-08-27",
-    eventos: [
       { hora: "22:00", nombre: "Concurso de sevillanas", tipo: "acto" },
-      { hora: "23:30", nombre: "Grupo Alborea", tipo: "directo" },
+      { hora: "23:30", nombre: "Los del Puente (rumbas)", tipo: "directo" },
+      { hora: "01:30", nombre: "DJ Curro", tipo: "dj" },
     ],
   },
   {
-    dia: "Viernes 28",
-    fecha: "2026-08-28",
-    eventos: [
-      { hora: "22:30", nombre: "Los del Puente (rumbas)", tipo: "directo" },
-      { hora: "01:30", nombre: "DJ Curro · sesión fin de feria", tipo: "dj" },
-    ],
-  },
-  {
-    dia: "Sábado 29",
-    fecha: "2026-08-29",
+    dia: "Domingo 20",
+    fecha: "2026-09-20",
     eventos: [
       { hora: "14:00", nombre: "Comida de clausura para socios", tipo: "comida" },
-      { hora: "23:00", nombre: "Gran fin de fiesta · todos los grupos", tipo: "directo" },
+      { hora: "22:00", nombre: "Gran fin de fiesta · todos los grupos", tipo: "directo" },
     ],
   },
 ];
