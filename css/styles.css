@@ -54,7 +54,6 @@ body {
 .hero-img {
   display: block;
   width: 100%;
-  max-width: 1100px;
   margin: 0 auto;
   height: auto;
 }
