@@ -183,9 +183,9 @@ body {
 .farol {
   position: absolute;
   top: 0;
-  width: 34px;
-  height: 41px;
-  margin-left: -17px;
+  width: 38px;
+  height: 43px;
+  margin-left: -19px;
   overflow: visible;
   transform-origin: 50% 0;
   animation: farol-entra 0.7s ease-out backwards,
