@@ -384,15 +384,6 @@ function iniciarCarteles() {
 /* ---------- Ambiente: farolillos de noche + parallax del banner ---------- */
 
 function iniciarAmbiente() {
-  // farolillos encendidos entre las 20:00 y las 07:00
-  const faroles = document.querySelector(".farolillos");
-  function nocturno() {
-    const h = new Date().getHours();
-    faroles.classList.toggle("noche", h >= 20 || h < 7);
-  }
-  nocturno();
-  setInterval(nocturno, 5 * 60 * 1000);
-
   // parallax sutil del banner (solo escritorio, respeta reduced-motion)
   const img = document.querySelector(".hero-img");
   const reducido = matchMedia("(prefers-reduced-motion: reduce)");
