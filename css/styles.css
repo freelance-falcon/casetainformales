@@ -47,7 +47,7 @@ body {
 /* ---------- Cabecera: cartel sobre lona ---------- */
 
 .hero {
-  background: #f5f8fa;
+  background: #fdfefe;
   padding-top: clamp(0.8rem, 2.5vw, 1.8rem);
 }
 
@@ -107,10 +107,12 @@ body {
   white-space: nowrap;
 }
 
-.nav-dot {
-  width: 11px; height: 11px;
+.nav-logo {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, var(--flamenco), #d94f82);
+  border: 1.5px solid var(--celeste-claro);
+  margin-right: 0.55rem;
 }
 
 .nav-links { display: flex; gap: 0.15rem; }
@@ -257,6 +259,24 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
+}
+
+/* siluetas oficiales flanqueando la cuenta atrás (solo pantallas anchas) */
+.deco { display: none; }
+
+@media (min-width: 1100px) {
+  .deco {
+    display: block;
+    position: absolute;
+    bottom: -28px;
+    height: 225px;
+    width: auto;
+    pointer-events: none;
+    opacity: 0.95;
+  }
+  .deco-izq { left: -240px; }
+  .deco-der { right: -240px; transform: scaleX(-1); }
 }
 
 .countdown-inner {
@@ -643,6 +663,13 @@ a.sponsor-card:hover {
   gap: 0.8rem;
 }
 .footer p { margin: 0; }
+
+.footer-logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 2px solid var(--celeste-claro);
+}
 
 /* ---------- Banner instalación ---------- */
 

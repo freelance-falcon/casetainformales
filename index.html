@@ -28,9 +28,10 @@
   <header class="hero" id="inicio">
     <img
       class="hero-img"
-      src="assets/header.svg"
-      onerror="this.onerror=null;this.src='assets/header.png'"
-      alt="Los Informales — caseta de amigos" />
+      src="assets/header-1800.webp"
+      srcset="assets/header-900.webp 900w, assets/header-1800.webp 1800w"
+      sizes="100vw"
+      alt="Caseta Los Informales — Feria de La Algaba" />
     <!-- cenefa de toldo: lona rayada con remate en ondas -->
     <div class="valance" aria-hidden="true">
       <svg viewBox="0 0 1440 42" preserveAspectRatio="none">
@@ -63,7 +64,7 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a class="nav-brand" href="#inicio">
-        <span class="nav-dot" aria-hidden="true"></span>Los Informales
+        <img class="nav-logo" src="assets/logo.webp" alt="" />Los Informales
       </a>
       <div class="nav-links">
         <a href="#noticias">Noticias</a>
@@ -89,6 +90,8 @@
 
     <!-- Cuenta atrás -->
     <section class="countdown reveal" id="cuenta-atras">
+      <img class="deco deco-izq" src="assets/deco-bailaora.webp" alt="" aria-hidden="true" />
+      <img class="deco deco-der" src="assets/deco-flamenco.webp" alt="" aria-hidden="true" />
       <div class="countdown-inner">
         <p class="countdown-label" id="countdownLabel">Para la feria quedan…</p>
         <div class="countdown-grid" id="countdown" aria-live="polite"></div>
@@ -144,6 +147,7 @@
   </main>
 
   <footer class="footer">
+    <img class="footer-logo" src="assets/logo.webp" alt="Logo de la caseta Los Informales" />
     <p>Hecho con <span aria-hidden="true">💙</span> por la peña <strong>Los Informales</strong></p>
     <button class="btn btn-ghost btn-small" id="installFooterBtn" hidden>Instalar como app</button>
   </footer>
