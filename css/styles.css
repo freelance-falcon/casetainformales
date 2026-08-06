@@ -719,7 +719,16 @@ a.sponsor-card:hover {
 }
 .ios-sheet-card ol { margin: 0; padding-left: 1.3rem; }
 .ios-sheet-card li { margin-bottom: 0.5rem; }
-.ios-icon { color: var(--celeste); font-weight: 800; }
+.ios-icon {
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+  stroke: var(--celeste-hondo);
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 .ios-close {
   position: absolute;
