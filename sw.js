@@ -1,6 +1,6 @@
 /* Service worker — cache básico para funcionar sin conexión */
 
-const CACHE = "informales-v11";
+const CACHE = "informales-v12";
 
 const PRECACHE = [
   "./",
@@ -11,9 +11,6 @@ const PRECACHE = [
   "manifest.webmanifest",
   "assets/header-900.webp",
   "assets/header-1800.webp",
-  "assets/logo.webp",
-  "assets/deco-bailaora.webp",
-  "assets/deco-flamenco.webp",
   "assets/icons/icon-192.png",
   "assets/icons/icon-512.png",
 ];

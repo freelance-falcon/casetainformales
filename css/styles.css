@@ -107,12 +107,11 @@ body {
   white-space: nowrap;
 }
 
-.nav-logo {
-  width: 32px;
-  height: 32px;
+.nav-dot {
+  width: 11px; height: 11px;
   border-radius: 50%;
-  border: 1.5px solid var(--celeste-claro);
-  margin-right: 0.55rem;
+  background: radial-gradient(circle at 35% 35%, var(--flamenco), #d94f82);
+  margin-right: 0.15rem;
 }
 
 .nav-links { display: flex; gap: 0.15rem; }
@@ -262,22 +261,6 @@ body {
   position: relative;
 }
 
-/* siluetas oficiales flanqueando la cuenta atrás (solo pantallas anchas) */
-.deco { display: none; }
-
-@media (min-width: 1100px) {
-  .deco {
-    display: block;
-    position: absolute;
-    bottom: -28px;
-    height: 225px;
-    width: auto;
-    pointer-events: none;
-    opacity: 0.95;
-  }
-  .deco-izq { left: -240px; }
-  .deco-der { right: -240px; transform: scaleX(-1); }
-}
 
 .countdown-inner {
   text-align: center;
@@ -663,13 +646,6 @@ a.sponsor-card:hover {
   gap: 0.8rem;
 }
 .footer p { margin: 0; }
-
-.footer-logo {
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  border: 2px solid var(--celeste-claro);
-}
 
 /* ---------- Banner instalación ---------- */
 
