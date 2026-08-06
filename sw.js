@@ -1,6 +1,6 @@
 /* Service worker — cache básico para funcionar sin conexión */
 
-const CACHE = "informales-v23";
+const CACHE = "informales-v24";
 
 const PRECACHE = [
   "./",

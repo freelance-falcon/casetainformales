@@ -180,9 +180,21 @@ function pintarMenu() {
         )
         .join("")}
     </div>
-    <p class="pescaito-infantil">${p.infantil}</p>`;
+    <p class="pescaito-infantil">${p.infantil}</p>
+    <p class="pescaito-infantil">La carta de la cena no detalla alérgenos: si tienes alergia, avísanos al reservar.</p>`;
+
+  const chips = (al) =>
+    al && al.length
+      ? `<span class="alergenos">${al
+          .map((c) => `<abbr class="alergeno" title="${ALERGENOS[c]}">${c}</abbr>`)
+          .join("")}</span>`
+      : "";
 
   aco.innerHTML =
+    `<p class="menu-nota menu-nota-alergenos">${MENU.notaAlergenos}</p>
+     <div class="alergenos-leyenda">${Object.entries(ALERGENOS)
+       .map(([c, n]) => `<span><abbr class="alergeno" title="${n}">${c}</abbr> ${n}</span>`)
+       .join("")}</div>` +
     MENU.secciones
       .map(
         (sec) => `
@@ -190,7 +202,10 @@ function pintarMenu() {
       <summary>${sec.titulo}<span class="menu-n">${sec.items.length}</span></summary>
       <ul class="menu-items">
         ${sec.items
-          .map(([n, precio]) => `<li><span>${n}</span><span class="menu-precio">${precio}</span></li>`)
+          .map(
+            ([n, precio, al]) =>
+              `<li><span class="menu-nombre">${n}${chips(al)}</span><span class="menu-precio">${precio}</span></li>`
+          )
           .join("")}
       </ul>
     </details>`

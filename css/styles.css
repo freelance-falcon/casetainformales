@@ -724,6 +724,51 @@ body {
   color: var(--tinta-suave);
 }
 
+/* ---------- Alérgenos ---------- */
+
+.menu-nota-alergenos {
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+  color: var(--tinta);
+}
+
+.alergenos-leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: var(--tinta-suave);
+}
+.alergenos-leyenda span { display: inline-flex; align-items: center; gap: 0.35rem; }
+
+.menu-nombre {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.alergenos { display: inline-flex; gap: 0.2rem; }
+
+.alergeno {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 21px;
+  height: 15px;
+  padding: 0 0.22rem;
+  border-radius: 5px;
+  background: var(--cielo);
+  border: 1px solid var(--celeste-claro);
+  color: var(--celeste-hondo);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: help;
+}
+
 /* ---------- Patrocinadores ---------- */
 
 .sponsor-grid {
