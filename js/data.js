@@ -49,6 +49,15 @@ const NOTICIAS = [
   },
 ];
 
+/* Patrocinadores: nombre, detalle opcional y enlace opcional.
+   Si algún día hay logos: añade "logo": "assets/patrocinadores/nombre.png" */
+const PATROCINADORES = [
+  { nombre: "Bar El Rincón", detalle: "Tapas y buen vino" },
+  { nombre: "Panadería La Espiga", detalle: "El pan de la caseta" },
+  { nombre: "Deportes Vega", detalle: "Equipación del equipo" },
+  { nombre: "Ferretería Ruiz", detalle: "" },
+];
+
 /* Programa: un bloque por día, con eventos ordenados por hora */
 const PROGRAMA = [
   {

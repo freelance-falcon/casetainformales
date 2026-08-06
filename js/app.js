@@ -171,6 +171,25 @@ function pintarInfo() {
   $("#infoContacto").innerHTML = enlaces.join("");
 }
 
+/* ---------- Patrocinadores ---------- */
+
+function pintarPatrocinadores() {
+  const grid = $("#sponsorGrid");
+  if (typeof PATROCINADORES === "undefined" || !PATROCINADORES.length) {
+    document.querySelector("#patrocinadores").hidden = true;
+    return;
+  }
+  grid.innerHTML = PATROCINADORES.map((p) => {
+    const contenido = `
+      ${p.logo ? `<img class="sponsor-logo" src="${p.logo}" alt="" loading="lazy" />` : ""}
+      <span class="sponsor-nombre">${p.nombre}</span>
+      ${p.detalle ? `<span class="sponsor-detalle">${p.detalle}</span>` : ""}`;
+    return p.url
+      ? `<a class="sponsor-card" href="${p.url}" target="_blank" rel="noopener">${contenido}</a>`
+      : `<div class="sponsor-card">${contenido}</div>`;
+  }).join("");
+}
+
 /* ---------- Navegación: sombra + sección activa ---------- */
 
 function iniciarNav() {
@@ -304,6 +323,7 @@ iniciarCuentaAtras();
 pintarNoticias();
 pintarPrograma();
 pintarInfo();
+pintarPatrocinadores();
 iniciarNav();
 iniciarReveal();
 iniciarInstalacion();

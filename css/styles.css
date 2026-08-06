@@ -545,6 +545,58 @@ body {
 
 .contact-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 
+/* ---------- Patrocinadores ---------- */
+
+.sponsor-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-top: 1.2rem;
+}
+
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  text-align: center;
+  text-decoration: none;
+  background: var(--card);
+  border: var(--borde);
+  border-radius: var(--radio);
+  padding: 1.1rem 1rem;
+  min-height: 84px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+a.sponsor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra);
+}
+
+.sponsor-logo {
+  max-height: 40px;
+  max-width: 80%;
+  object-fit: contain;
+  margin-bottom: 0.35rem;
+}
+
+.sponsor-nombre {
+  font-weight: 800;
+  color: var(--celeste-hondo);
+  font-size: 0.98rem;
+}
+
+.sponsor-detalle {
+  font-size: 0.8rem;
+  color: var(--tinta-suave);
+}
+
+@media (max-width: 480px) {
+  .sponsor-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+  .sponsor-card { padding: 0.9rem 0.6rem; min-height: 74px; }
+}
+
 /* ---------- Botones ---------- */
 
 .btn {
@@ -692,17 +744,19 @@ body {
 .reveal.visible { opacity: 1; transform: none; }
 
 .reveal .news-card,
-.reveal .info-card {
+.reveal .info-card,
+.reveal .sponsor-card {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 .reveal.visible .news-card,
-.reveal.visible .info-card { opacity: 1; transform: none; }
-.reveal.visible :is(.news-card, .info-card):nth-child(1) { transition-delay: 0.08s; }
-.reveal.visible :is(.news-card, .info-card):nth-child(2) { transition-delay: 0.18s; }
-.reveal.visible :is(.news-card, .info-card):nth-child(3) { transition-delay: 0.28s; }
-.reveal.visible :is(.news-card, .info-card):nth-child(n+4) { transition-delay: 0.38s; }
+.reveal.visible .info-card,
+.reveal.visible .sponsor-card { opacity: 1; transform: none; }
+.reveal.visible :is(.news-card, .info-card, .sponsor-card):nth-child(1) { transition-delay: 0.08s; }
+.reveal.visible :is(.news-card, .info-card, .sponsor-card):nth-child(2) { transition-delay: 0.18s; }
+.reveal.visible :is(.news-card, .info-card, .sponsor-card):nth-child(3) { transition-delay: 0.28s; }
+.reveal.visible :is(.news-card, .info-card, .sponsor-card):nth-child(n+4) { transition-delay: 0.38s; }
 
 /* ---------- Barra inferior (móvil) ---------- */
 
@@ -771,6 +825,7 @@ body {
   html { scroll-behavior: auto; }
   .reveal,
   .reveal .news-card,
-  .reveal .info-card { opacity: 1; transform: none; transition: none; }
+  .reveal .info-card,
+  .reveal .sponsor-card { opacity: 1; transform: none; transition: none; }
   * { animation: none !important; }
 }
