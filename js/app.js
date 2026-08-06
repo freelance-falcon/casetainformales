@@ -406,9 +406,28 @@ function iniciarAmbiente() {
 /* ---------- Service worker ---------- */
 
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () =>
-    navigator.serviceWorker.register("sw.js").catch(() => {})
-  );
+  const teniaControlador = !!navigator.serviceWorker.controller;
+
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("sw.js", { updateViaCache: "none" })
+      .then((reg) => {
+        // busca versiones nuevas al volver a la app
+        document.addEventListener("visibilitychange", () => {
+          if (document.visibilityState === "visible") reg.update();
+        });
+      })
+      .catch(() => {});
+  });
+
+  // cuando entra un service worker nuevo, recarga una vez para
+  // asegurar que HTML, CSS y JS son de la misma versión
+  let recargado = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (!teniaControlador || recargado) return;
+    recargado = true;
+    location.reload();
+  });
 }
 
 /* ---------- Arranque ---------- */
