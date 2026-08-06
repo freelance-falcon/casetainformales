@@ -137,6 +137,26 @@ body {
   .nav-brand { font-size: 0.95rem; }
 }
 
+.nav-insta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  color: var(--celeste-hondo);
+  transition: background 0.25s ease;
+}
+.nav-insta:hover { background: var(--cielo); }
+.nav-insta svg {
+  width: 21px;
+  height: 21px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
 /* ---------- Farolillos ---------- */
 
 .farolillos {
@@ -486,28 +506,19 @@ body {
 }
 
 .event-cartel {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
+  font-family: var(--fuente-texto);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.32rem 0.75rem;
+  border-radius: 999px;
   border: 1.5px solid var(--celeste-claro);
   background: var(--card);
+  color: var(--celeste-hondo);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 .event-cartel:hover { background: var(--cielo); border-color: var(--celeste); }
-.event-cartel:active { transform: scale(0.92); }
-.event-cartel svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--celeste-hondo);
-  fill: none;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+.event-cartel:active { transform: scale(0.94); }
 
 .dia-vacio { margin: 0.4rem 0.25rem; color: var(--tinta-suave); }
 
@@ -731,98 +742,6 @@ body {
   color: var(--tinta-suave);
 }
 
-/* ---------- Info ---------- */
-
-.info-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-top: 1.2rem;
-}
-
-.info-card {
-  background: var(--card);
-  border: var(--borde);
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
-  padding: 1.35rem;
-}
-
-.info-card h3 {
-  margin: 0 0 0.6rem;
-  font-size: 1.02rem;
-  font-weight: 800;
-  color: var(--celeste-hondo);
-}
-
-.info-card p { margin: 0 0 0.8rem; color: var(--tinta-suave); font-size: 0.95rem; }
-
-.hours-list { list-style: none; margin: 0; padding: 0; }
-.hours-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.45rem 0;
-  font-size: 0.95rem;
-}
-.hours-list li + li { border-top: 1px dashed var(--celeste-claro); }
-.hours-list .h-dia { color: var(--tinta-suave); font-weight: 600; }
-.hours-list .h-horas { font-weight: 800; color: var(--celeste-hondo); font-variant-numeric: tabular-nums; }
-
-.contact-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-
-/* ---------- Patrocinadores ---------- */
-
-.sponsor-grid {
-  display: grid;
-  gap: 0.8rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  margin-top: 1.2rem;
-}
-
-.sponsor-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.15rem;
-  text-align: center;
-  text-decoration: none;
-  background: var(--card);
-  border: var(--borde);
-  border-radius: var(--radio);
-  padding: 1.1rem 1rem;
-  min-height: 84px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-a.sponsor-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--sombra);
-}
-
-.sponsor-logo {
-  max-height: 40px;
-  max-width: 80%;
-  object-fit: contain;
-  margin-bottom: 0.35rem;
-}
-
-.sponsor-nombre {
-  font-weight: 800;
-  color: var(--celeste-hondo);
-  font-size: 0.98rem;
-}
-
-.sponsor-detalle {
-  font-size: 0.8rem;
-  color: var(--tinta-suave);
-}
-
-@media (max-width: 480px) {
-  .sponsor-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
-  .sponsor-card { padding: 0.9rem 0.6rem; min-height: 74px; }
-}
-
 /* ---------- Botones ---------- */
 
 .btn {
@@ -870,6 +789,29 @@ a.sponsor-card:hover {
   gap: 0.8rem;
 }
 .footer p { margin: 0; }
+
+.footer-insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  color: var(--celeste-hondo);
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--celeste-claro);
+  background: var(--card);
+  transition: background 0.25s ease;
+}
+.footer-insta:hover { background: var(--cielo); }
+.footer-insta svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
 
 /* ---------- Banner instalación ---------- */
 
@@ -979,19 +921,17 @@ a.sponsor-card:hover {
 .reveal.visible { opacity: 1; transform: none; }
 
 .reveal .news-card,
-.reveal .info-card,
 .reveal .sponsor-card {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 .reveal.visible .news-card,
-.reveal.visible .info-card,
 .reveal.visible .sponsor-card { opacity: 1; transform: none; }
-.reveal.visible :is(.news-card, .info-card, .sponsor-card):nth-child(1) { transition-delay: 0.08s; }
-.reveal.visible :is(.news-card, .info-card, .sponsor-card):nth-child(2) { transition-delay: 0.18s; }
-.reveal.visible :is(.news-card, .info-card, .sponsor-card):nth-child(3) { transition-delay: 0.28s; }
-.reveal.visible :is(.news-card, .info-card, .sponsor-card):nth-child(n+4) { transition-delay: 0.38s; }
+.reveal.visible :is(.news-card, .sponsor-card):nth-child(1) { transition-delay: 0.08s; }
+.reveal.visible :is(.news-card, .sponsor-card):nth-child(2) { transition-delay: 0.18s; }
+.reveal.visible :is(.news-card, .sponsor-card):nth-child(3) { transition-delay: 0.28s; }
+.reveal.visible :is(.news-card, .sponsor-card):nth-child(n+4) { transition-delay: 0.38s; }
 
 /* ---------- Barra inferior (móvil) ---------- */
 
@@ -1060,7 +1000,6 @@ a.sponsor-card:hover {
   html { scroll-behavior: auto; }
   .reveal,
   .reveal .news-card,
-  .reveal .info-card,
   .reveal .sponsor-card { opacity: 1; transform: none; transition: none; }
   * { animation: none !important; }
 }

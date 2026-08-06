@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Karla:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=18" />
+  <link rel="stylesheet" href="css/styles.css?v=19" />
 </head>
 <body>
 
@@ -70,8 +70,10 @@
         <a href="#noticias">Noticias</a>
         <a href="#programa">Programa</a>
         <a href="#menu">Menú</a>
-        <a href="#info">Info</a>
       </div>
+      <a class="nav-insta" href="https://www.instagram.com/casetalosinformales" target="_blank" rel="noopener" aria-label="Instagram de la caseta">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+      </a>
     </div>
   </nav>
 
@@ -122,28 +124,6 @@
       <div class="menu-acordeon" id="menuAcordeon"></div>
     </section>
 
-    <!-- Info útil -->
-    <section class="section reveal" id="info">
-      <p class="eyebrow">Dónde y cuándo</p>
-      <h2 class="section-title">Info útil</h2>
-      <div class="info-grid">
-        <article class="info-card">
-          <h3>Dónde estamos</h3>
-          <p id="infoUbicacion"></p>
-          <a class="btn btn-ghost" id="infoMaps" target="_blank" rel="noopener">Cómo llegar</a>
-        </article>
-        <article class="info-card">
-          <h3>Horarios de la caseta</h3>
-          <ul class="hours-list" id="infoHorarios"></ul>
-        </article>
-        <article class="info-card">
-          <h3>Contacto</h3>
-          <p>¿Dudas, sugerencias o quieres hacerte socio? Escríbenos.</p>
-          <div class="contact-row" id="infoContacto"></div>
-        </article>
-      </div>
-    </section>
-
     <!-- Patrocinadores -->
     <section class="section reveal" id="patrocinadores">
       <p class="eyebrow">Gracias a ellos</p>
@@ -155,6 +135,10 @@
   </main>
 
   <footer class="footer">
+    <a class="footer-insta" href="https://www.instagram.com/casetalosinformales" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+      @casetalosinformales
+    </a>
     <p>Hecho con <span aria-hidden="true">💙</span> por la peña <strong>Los Informales</strong></p>
     <button class="btn btn-ghost btn-small" id="installFooterBtn" hidden>Instalar como app</button>
   </footer>
@@ -176,10 +160,6 @@
     <a href="#menu" class="tabbar-item" data-sec="menu">
       <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3 V21 M4.5 3 V8 A2.5 2.5 0 0 0 9.5 8 V3 M15.5 12.5 V21 M15.5 12.5 C15.5 8 16.5 3.5 19.5 3 V21"/></svg>
       <span class="tabbar-label">Menú</span>
-    </a>
-    <a href="#info" class="tabbar-item" data-sec="info">
-      <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11 V16"/><circle cx="12" cy="8" r="0.6" fill="currentColor"/></svg>
-      <span class="tabbar-label">Info</span>
     </a>
   </nav>
 

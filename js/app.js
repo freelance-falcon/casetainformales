@@ -122,9 +122,7 @@ function pintarPrograma() {
             clase = " pasado";
           }
           const btnCartel = e.cartel
-            ? `<button class="event-cartel" data-cartel="${e.cartel}" aria-label="Ver cartel de ${e.nombre}" title="Ver cartel">
-                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="M4.5 17.5 L10 12.5 L13.5 15.5 L17 12 L19.5 14.5"/></svg>
-               </button>`
+            ? `<button class="event-cartel" data-cartel="${e.cartel}" aria-label="Ver cartel de ${e.nombre}">Cartel</button>`
             : "";
           return `
       <div class="event-row${clase}">
@@ -153,27 +151,6 @@ function pintarPrograma() {
   if (seleccionado > 0) {
     tabs.querySelector('[aria-selected="true"]')?.scrollIntoView({ inline: "center", block: "nearest" });
   }
-}
-
-/* ---------- Info ---------- */
-
-function pintarInfo() {
-  $("#infoUbicacion").textContent = CASETA.ubicacion.texto;
-  $("#infoMaps").href = CASETA.ubicacion.mapsUrl;
-
-  $("#infoHorarios").innerHTML = CASETA.horarios
-    .map(
-      (h) =>
-        `<li><span class="h-dia">${h.dia}</span><span class="h-horas">${h.horas}</span></li>`
-    )
-    .join("");
-
-  const c = CASETA.contacto;
-  const enlaces = [];
-  if (c.instagram) enlaces.push(`<a class="btn btn-ghost btn-small" href="${c.instagram}" target="_blank" rel="noopener">📸 Instagram</a>`);
-  if (c.whatsapp) enlaces.push(`<a class="btn btn-ghost btn-small" href="${c.whatsapp}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
-  if (c.email) enlaces.push(`<a class="btn btn-ghost btn-small" href="mailto:${c.email}">✉️ Email</a>`);
-  $("#infoContacto").innerHTML = enlaces.join("");
 }
 
 /* ---------- Menú ---------- */
@@ -402,7 +379,6 @@ if ("serviceWorker" in navigator) {
 iniciarCuentaAtras();
 pintarNoticias();
 pintarPrograma();
-pintarInfo();
 pintarMenu();
 pintarPatrocinadores();
 iniciarNav();
