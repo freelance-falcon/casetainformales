@@ -176,6 +176,51 @@ function pintarInfo() {
   $("#infoContacto").innerHTML = enlaces.join("");
 }
 
+/* ---------- Menú ---------- */
+
+function pintarMenu() {
+  const card = $("#pescaitoCard");
+  const aco = $("#menuAcordeon");
+  if (typeof MENU === "undefined") {
+    document.querySelector("#menu").hidden = true;
+    return;
+  }
+
+  const p = MENU.pescaito;
+  card.innerHTML = `
+    <div class="pescaito-head">
+      <h3>${p.titulo}</h3>
+      <span class="pescaito-precio">${p.precio}</span>
+    </div>
+    <div class="pescaito-bloques">
+      ${p.bloques
+        .map(
+          (b) => `
+        <div class="pescaito-bloque">
+          <h4>${b.titulo}</h4>
+          <ul>${b.items.map((i) => `<li>${i}</li>`).join("")}</ul>
+        </div>`
+        )
+        .join("")}
+    </div>
+    <p class="pescaito-infantil">${p.infantil}</p>`;
+
+  aco.innerHTML =
+    MENU.secciones
+      .map(
+        (sec) => `
+    <details class="menu-cat">
+      <summary>${sec.titulo}<span class="menu-n">${sec.items.length}</span></summary>
+      <ul class="menu-items">
+        ${sec.items
+          .map(([n, precio]) => `<li><span>${n}</span><span class="menu-precio">${precio}</span></li>`)
+          .join("")}
+      </ul>
+    </details>`
+      )
+      .join("") + `<p class="menu-nota">${MENU.nota}</p>`;
+}
+
 /* ---------- Patrocinadores ---------- */
 
 function pintarPatrocinadores() {
@@ -358,6 +403,7 @@ iniciarCuentaAtras();
 pintarNoticias();
 pintarPrograma();
 pintarInfo();
+pintarMenu();
 pintarPatrocinadores();
 iniciarNav();
 iniciarReveal();

@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Karla:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=18" />
 </head>
 <body>
 
@@ -69,6 +69,7 @@
       <div class="nav-links">
         <a href="#noticias">Noticias</a>
         <a href="#programa">Programa</a>
+        <a href="#menu">Menú</a>
         <a href="#info">Info</a>
       </div>
     </div>
@@ -110,6 +111,15 @@
       <p class="section-sub">Grupos, actuaciones y horarios, día a día.</p>
       <div class="day-tabs" id="dayTabs" role="tablist" aria-label="Días de feria"></div>
       <div class="day-panel" id="dayPanel"></div>
+    </section>
+
+    <!-- Menú -->
+    <section class="section reveal" id="menu">
+      <p class="eyebrow">De barra y cocina</p>
+      <h2 class="section-title">La carta</h2>
+      <p class="section-sub">Precios de la caseta y menú de la cena del pescaíto.</p>
+      <div class="pescaito-card" id="pescaitoCard"></div>
+      <div class="menu-acordeon" id="menuAcordeon"></div>
     </section>
 
     <!-- Info útil -->
@@ -162,6 +172,10 @@
     <a href="#programa" class="tabbar-item" data-sec="programa">
       <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18 V6 L19 4 V16 M9 18 A2.5 2.5 0 1 1 4 18 A2.5 2.5 0 1 1 9 18 M19 16 A2.5 2.5 0 1 1 14 16 A2.5 2.5 0 1 1 19 16 M9 9 L19 7"/></svg>
       <span class="tabbar-label">Programa</span>
+    </a>
+    <a href="#menu" class="tabbar-item" data-sec="menu">
+      <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3 V21 M4.5 3 V8 A2.5 2.5 0 0 0 9.5 8 V3 M15.5 12.5 V21 M15.5 12.5 C15.5 8 16.5 3.5 19.5 3 V21"/></svg>
+      <span class="tabbar-label">Menú</span>
     </a>
     <a href="#info" class="tabbar-item" data-sec="info">
       <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11 V16"/><circle cx="12" cy="8" r="0.6" fill="currentColor"/></svg>

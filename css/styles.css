@@ -588,6 +588,149 @@ body {
 }
 .cartel-close:hover { background: rgba(255, 255, 255, 0.28); }
 
+/* ---------- Menú ---------- */
+
+.pescaito-card {
+  background: var(--card);
+  border: 1.5px solid var(--albero);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.4rem;
+  margin: 1.2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.pescaito-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 7px;
+  background: repeating-linear-gradient(90deg, var(--albero) 0 16px, var(--card) 16px 32px);
+}
+
+.pescaito-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0.4rem 0 0.9rem;
+}
+.pescaito-head h3 {
+  margin: 0;
+  font-family: var(--fuente-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--celeste-hondo);
+}
+.pescaito-precio {
+  font-weight: 800;
+  color: var(--albero);
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.pescaito-bloques {
+  display: grid;
+  gap: 1rem 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+.pescaito-bloque h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--albero);
+}
+.pescaito-bloque ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.93rem;
+  color: var(--tinta);
+}
+.pescaito-bloque li { padding: 0.14rem 0; }
+
+.pescaito-infantil {
+  margin: 1rem 0 0;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--celeste-claro);
+  font-size: 0.88rem;
+  color: var(--tinta-suave);
+}
+
+.menu-acordeon { display: grid; gap: 0.6rem; }
+
+.menu-cat {
+  background: var(--card);
+  border: var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+.menu-cat summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.95rem 1.2rem;
+  font-weight: 800;
+  color: var(--celeste-hondo);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  transition: background 0.2s ease;
+}
+.menu-cat summary::-webkit-details-marker { display: none; }
+.menu-cat summary:hover { background: var(--cielo); }
+.menu-cat summary::after {
+  content: "";
+  width: 9px; height: 9px;
+  border-right: 2.5px solid var(--celeste);
+  border-bottom: 2.5px solid var(--celeste);
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+.menu-cat[open] summary::after { transform: rotate(225deg); }
+
+.menu-n {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--tinta-suave);
+  background: var(--cielo);
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+}
+
+.menu-items {
+  list-style: none;
+  margin: 0;
+  padding: 0.2rem 1.2rem 1rem;
+}
+.menu-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.34rem 0;
+  font-size: 0.93rem;
+}
+.menu-items li + li { border-top: 1px dashed var(--celeste-claro); }
+.menu-precio {
+  font-weight: 800;
+  color: var(--celeste-hondo);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.menu-nota {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  color: var(--tinta-suave);
+}
+
 /* ---------- Info ---------- */
 
 .info-grid {

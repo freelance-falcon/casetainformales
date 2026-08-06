@@ -1,6 +1,6 @@
 /* Service worker — cache básico para funcionar sin conexión */
 
-const CACHE = "informales-v17";
+const CACHE = "informales-v18";
 
 const PRECACHE = [
   "./",
@@ -39,7 +39,7 @@ self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || url.origin !== location.origin) return;
 
   const esContenido =
-    e.request.mode === "navigate" || url.pathname.endsWith(".js");
+    e.request.mode === "navigate" || url.pathname.endsWith(".js") || url.pathname.endsWith(".css");
 
   if (esContenido) {
     e.respondWith(
