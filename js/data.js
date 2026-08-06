@@ -18,7 +18,7 @@ const CASETA = {
     { dia: "Domingo", horas: "13:00 – 02:00" },
   ],
   contacto: {
-    instagram: "https://instagram.com/losinformales",
+    instagram: "https://www.instagram.com/casetalosinformales",
     whatsapp: "",
     email: "",
   },
