@@ -121,14 +121,19 @@ function pintarPrograma() {
           } else if (esHoy && siguienteIdx === -1) {
             clase = " pasado";
           }
+          const btnCartel = e.cartel
+            ? `<button class="event-cartel" data-cartel="${e.cartel}" aria-label="Ver cartel de ${e.nombre}" title="Ver cartel">
+                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="M4.5 17.5 L10 12.5 L13.5 15.5 L17 12 L19.5 14.5"/></svg>
+               </button>`
+            : "";
           return `
       <div class="event-row${clase}">
         <span class="event-time">${e.hora}</span>
         <span class="event-name">${e.nombre}</span>
-        <span class="event-type ${e.tipo}">${e.tipo}</span>
+        <span class="event-extra">${btnCartel}<span class="event-type ${e.tipo}">${e.tipo}</span></span>
       </div>`;
         })
-        .join("") || "<p>Sin eventos este día.</p>";
+        .join("") || '<p class="dia-vacio">Sin actuaciones anunciadas este día… de momento 😉</p>';
     // reinicia la animación de entrada
     panel.style.animation = "none";
     void panel.offsetHeight;
@@ -309,6 +314,36 @@ function iniciarInstalacion() {
   });
 }
 
+/* ---------- Lightbox de carteles ---------- */
+
+function iniciarCarteles() {
+  const modal = $("#cartelModal");
+  const img = $("#cartelImg");
+
+  document.addEventListener("click", (ev) => {
+    const btn = ev.target.closest(".event-cartel");
+    if (btn) {
+      img.src = btn.dataset.cartel;
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+      return;
+    }
+    if (!modal.hidden && (ev.target === modal || ev.target.closest(".cartel-close"))) {
+      cerrar();
+    }
+  });
+
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape" && !modal.hidden) cerrar();
+  });
+
+  function cerrar() {
+    modal.hidden = true;
+    img.src = "";
+    document.body.style.overflow = "";
+  }
+}
+
 /* ---------- Service worker ---------- */
 
 if ("serviceWorker" in navigator) {
@@ -327,3 +362,4 @@ pintarPatrocinadores();
 iniciarNav();
 iniciarReveal();
 iniciarInstalacion();
+iniciarCarteles();

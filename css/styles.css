@@ -478,8 +478,40 @@ body {
 
 .event-name { font-weight: 600; }
 
-.event-type {
+.event-extra {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.event-cartel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1.5px solid var(--celeste-claro);
+  background: var(--card);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.event-cartel:hover { background: var(--cielo); border-color: var(--celeste); }
+.event-cartel:active { transform: scale(0.92); }
+.event-cartel svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--celeste-hondo);
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dia-vacio { margin: 0.4rem 0.25rem; color: var(--tinta-suave); }
+
+.event-type {
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -505,8 +537,56 @@ body {
     grid-row: 2;
     line-height: 1.35;
   }
-  .event-type { justify-self: start; }
+  .event-extra { justify-self: start; flex-direction: row-reverse; }
 }
+
+/* ---------- Lightbox de carteles ---------- */
+
+.cartel-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(15, 30, 42, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  animation: fadeIn 0.25s ease;
+  cursor: zoom-out;
+}
+.cartel-modal[hidden] { display: none; }
+
+.cartel-modal img {
+  max-width: min(560px, 94vw);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+  animation: cartelZoom 0.3s cubic-bezier(0.34, 1.3, 0.64, 1);
+  cursor: default;
+}
+
+@keyframes cartelZoom {
+  from { opacity: 0; transform: scale(0.92) translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.cartel-close {
+  position: absolute;
+  top: calc(0.9rem + env(safe-area-inset-top));
+  right: 0.9rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.cartel-close:hover { background: rgba(255, 255, 255, 0.28); }
 
 /* ---------- Info ---------- */
 

@@ -52,10 +52,9 @@ const NOTICIAS = [
 /* Patrocinadores: nombre, detalle opcional y enlace opcional.
    Si algún día hay logos: añade "logo": "assets/patrocinadores/nombre.png" */
 const PATROCINADORES = [
-  { nombre: "Bar El Rincón", detalle: "Tapas y buen vino" },
-  { nombre: "Panadería La Espiga", detalle: "El pan de la caseta" },
-  { nombre: "Deportes Vega", detalle: "Equipación del equipo" },
-  { nombre: "Ferretería Ruiz", detalle: "" },
+  { nombre: "Algabterra", detalle: "Excavaciones y movimiento de tierras · 672 041 292" },
+  { nombre: "Tu Mesa de Siempre", detalle: "Catering" },
+  { nombre: "Hoyo10", detalle: "Café bar & copas" },
 ];
 
 /* Programa: un bloque por día, con eventos ordenados por hora */
@@ -64,44 +63,40 @@ const PROGRAMA = [
     dia: "Miércoles 16",
     fecha: "2026-09-16",
     eventos: [
-      { hora: "22:00", nombre: "Pregón y encendido del alumbrado", tipo: "acto" },
-      { hora: "23:00", nombre: "Grupo Alborea", tipo: "directo" },
-      { hora: "01:30", nombre: "DJ Curro", tipo: "dj" },
+      { hora: "22:00", nombre: "Cena de pescaíto · José Antonio Sabin", tipo: "comida", cartel: "assets/carteles/sabin.webp" },
+      { hora: "00:30", nombre: "Las Zarzanas", tipo: "directo", cartel: "assets/carteles/zarzanas.webp" },
     ],
   },
   {
     dia: "Jueves 17",
     fecha: "2026-09-17",
     eventos: [
-      { hora: "14:00", nombre: "Paella de apertura para socios", tipo: "comida" },
-      { hora: "22:30", nombre: "Sur y Compás (sevillanas)", tipo: "directo" },
+      { hora: "17:30", nombre: "Malakay Music", tipo: "directo", cartel: "assets/carteles/malakay.webp" },
+      { hora: "20:00", nombre: "Caty Ocaña", tipo: "directo", cartel: "assets/carteles/caty-ocana.webp" },
+      { hora: "00:30", nombre: "Grupo Magustami", tipo: "directo", cartel: "assets/carteles/magustami.webp" },
     ],
   },
   {
     dia: "Viernes 18",
     fecha: "2026-09-18",
     eventos: [
-      { hora: "13:30", nombre: "Día de las familias · juegos para peques", tipo: "acto" },
-      { hora: "22:30", nombre: "Trío Albahaca", tipo: "directo" },
-      { hora: "01:30", nombre: "DJ Curro", tipo: "dj" },
+      { hora: "17:30", nombre: "Ángela Antúnez", tipo: "directo", cartel: "assets/carteles/angela-antunez.webp" },
+      { hora: "20:00", nombre: "Amoloys Music Live", tipo: "directo", cartel: "assets/carteles/amoloys.webp" },
+      { hora: "01:00", nombre: "Niño Brasas", tipo: "directo", cartel: "assets/carteles/nino-brasas.webp" },
     ],
   },
   {
     dia: "Sábado 19",
     fecha: "2026-09-19",
     eventos: [
-      { hora: "14:00", nombre: "Concurso de tortillas", tipo: "comida" },
-      { hora: "22:00", nombre: "Concurso de sevillanas", tipo: "acto" },
-      { hora: "23:30", nombre: "Los del Puente (rumbas)", tipo: "directo" },
-      { hora: "01:30", nombre: "DJ Curro", tipo: "dj" },
+      { hora: "17:30", nombre: "Grupo Kimbala", tipo: "directo", cartel: "assets/carteles/kimbala.webp" },
+      { hora: "20:00", nombre: "Nando Sanz & Los Malafama", tipo: "directo", cartel: "assets/carteles/nando-sanz.webp" },
+      { hora: "01:00", nombre: "Nikelao Flamenco", tipo: "directo", cartel: "assets/carteles/nikelao.webp" },
     ],
   },
   {
     dia: "Domingo 20",
     fecha: "2026-09-20",
-    eventos: [
-      { hora: "14:00", nombre: "Comida de clausura para socios", tipo: "comida" },
-      { hora: "22:00", nombre: "Gran fin de fiesta · todos los grupos", tipo: "directo" },
-    ],
+    eventos: [],
   },
 ];
