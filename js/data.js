@@ -28,6 +28,27 @@ const CASETA = {
 const NOTICIAS = [
   {
     fecha: "2026-08-07",
+    titulo: "El descuento de socio, siempre en ticket",
+    texto:
+      "El 20 % de descuento de socio se aplica pagando con ticket y queda reflejado en él. Si pagas en efectivo, pagas lo mismo que quien no es socio.",
+    etiqueta: "Socios",
+  },
+  {
+    fecha: "2026-08-07",
+    titulo: "¿Necesitas más tickets?",
+    texto:
+      "Si quieres solicitar más tickets, ponte antes en contacto con alguno de los responsables de la caseta.",
+    etiqueta: "Socios",
+  },
+  {
+    fecha: "2026-08-07",
+    titulo: "¿Ideas para la carta?",
+    texto:
+      "El catering está abierto a sugerencias de comidas y bebidas. Cuéntanos qué echas en falta y lo trasladamos.",
+    etiqueta: "Caseta",
+  },
+  {
+    fecha: "2026-08-07",
     titulo: "Las cuentas, claras: prioridades de este año",
     texto:
       "Este año, con un presupuesto más ajustado, la junta ha decidido dónde poner el dinero común: cubrir la cena del pescaíto de los socios, mantener el nivel y la cantidad de grupos en directo, hacer las mejoras necesarias en el escenario y estrenar decoración en el patio.",
