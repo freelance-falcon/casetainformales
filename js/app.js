@@ -223,7 +223,7 @@ function pintarPatrocinadores() {
   }
   grid.innerHTML = PATROCINADORES.map((p) => {
     const contenido = `
-      ${p.logo ? `<img class="sponsor-logo" src="${p.logo}" alt="" loading="lazy" />` : ""}
+      ${p.logo ? `<span class="sponsor-marco"><img class="sponsor-logo" src="${p.logo}" alt="" loading="lazy" /></span>` : ""}
       <span class="sponsor-nombre">${p.nombre}</span>
       ${p.detalle ? `<span class="sponsor-detalle">${p.detalle}</span>` : ""}`;
     return p.url
