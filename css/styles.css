@@ -427,7 +427,6 @@ body {
   display: block;
   width: 100%;
   border-radius: 10px;
-  border: var(--borde);
 }
 .socio-foto figcaption {
   margin-top: 0.5rem;
@@ -483,7 +482,6 @@ body {
   display: block;
   width: 100%;
   border-radius: 10px;
-  border: var(--borde);
 }
 .socio-foto figcaption {
   margin-top: 0.5rem;
