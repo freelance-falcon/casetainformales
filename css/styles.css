@@ -792,10 +792,11 @@ a.sponsor-card:hover {
 }
 
 .sponsor-logo {
-  max-height: 40px;
-  max-width: 80%;
+  height: 88px;
+  max-width: 100%;
   object-fit: contain;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
 }
 
 .sponsor-nombre {

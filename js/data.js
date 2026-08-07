@@ -38,9 +38,17 @@ const NOTICIAS = [
 /* Patrocinadores: nombre, detalle opcional y enlace opcional.
    Si algún día hay logos: añade "logo": "assets/patrocinadores/nombre.png" */
 const PATROCINADORES = [
-  { nombre: "Algabterra", detalle: "Excavaciones y movimiento de tierras · 672 041 292" },
-  { nombre: "Tu Mesa de Siempre", detalle: "Catering" },
-  { nombre: "Hoyo10", detalle: "Café bar & copas" },
+  { nombre: "Algabterra", detalle: "Excavaciones y movimiento de tierras · 672 041 292", logo: "assets/patrocinadores/algabterra.webp" },
+  { nombre: "Tu Mesa de Siempre", detalle: "Catering", logo: "assets/patrocinadores/tu-mesa.webp" },
+  { nombre: "Hoyo10", detalle: "Café bar & copas", logo: "assets/patrocinadores/hoyo10.webp" },
+  { nombre: "Grup Algaba", detalle: "", logo: "assets/patrocinadores/grup-algaba.webp" },
+  { nombre: "Grupo PR Palets", detalle: "", logo: "assets/patrocinadores/pr-palets.webp" },
+  { nombre: "Ecosum", detalle: "Seguridad, construcción y suministros · 654 33 55 79", logo: "assets/patrocinadores/ecosum.webp" },
+  { nombre: "Podas Laura", detalle: "Gran Capitán 6, La Algaba · 671 517 863", logo: "assets/patrocinadores/podas-laura.webp" },
+  { nombre: "Rufino", detalle: "618 714 029", logo: "assets/patrocinadores/rufino.webp" },
+  { nombre: "Velázquez Coca", detalle: "Climatización", logo: "assets/patrocinadores/velazquez-coca.webp" },
+  { nombre: "SABORes", detalle: "", logo: "assets/patrocinadores/sabores.webp" },
+  { nombre: "José A. Sevilla", detalle: "Construcciones y reformas · 615 96 37 60", logo: "assets/patrocinadores/jose-sevilla.webp" },
 ];
 
 /* Programa: un bloque por día, con eventos ordenados por hora */
