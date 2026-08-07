@@ -24,35 +24,50 @@ const CASETA = {
   },
 };
 
-/* Noticias: la primera es la más reciente (sale destacada) */
+/* Sección Socios: lo que hay que saber siendo socio */
+const SOCIOS = {
+  destacado: {
+    titulo: "La pulsera es tu identificación",
+    texto:
+      "Llévala puesta en todo momento: es lo que te acredita como socio dentro de la caseta.",
+    imagen: "assets/pulsera.webp",
+    pie: "Así es la pulsera de este año, con el 5.º aniversario de la caseta.",
+  },
+  puntos: [
+    {
+      titulo: "Cena del pescaíto cubierta",
+      texto: "La cena del pescaíto de los socios se cubre con el dinero común.",
+    },
+    {
+      titulo: "20 % de descuento con ticket",
+      texto:
+        "El descuento se aplica solo pagando con ticket y queda reflejado en él. En efectivo pagas lo mismo que quien no es socio.",
+    },
+  ],
+};
+
+/* Comunicado de la junta */
 const NOTICIAS = [
   {
     fecha: "2026-08-07",
-    titulo: "El descuento de socio, siempre en ticket",
+    titulo: "Compra de tickets: avisa antes",
     texto:
-      "El 20 % de descuento de socio se aplica pagando con ticket y queda reflejado en él. Si pagas en efectivo, pagas lo mismo que quien no es socio.",
-    etiqueta: "Socios",
-  },
-  {
-    fecha: "2026-08-07",
-    titulo: "¿Necesitas más tickets?",
-    texto:
-      "Si quieres solicitar más tickets, ponte antes en contacto con alguno de los responsables de la caseta.",
-    etiqueta: "Socios",
+      "Si vas a necesitar más tickets, ponte en contacto con alguno de los responsables antes que nadie, para poder organizarlo con tiempo.",
+    etiqueta: "Tickets",
   },
   {
     fecha: "2026-08-07",
     titulo: "¿Ideas para la carta?",
     texto:
       "El catering está abierto a sugerencias de comidas y bebidas. Cuéntanos qué echas en falta y lo trasladamos.",
-    etiqueta: "Caseta",
+    etiqueta: "Carta",
   },
   {
     fecha: "2026-08-07",
-    titulo: "Las cuentas, claras: prioridades de este año",
+    titulo: "Así se reparte el presupuesto",
     texto:
-      "Este año, con un presupuesto más ajustado, la junta ha decidido dónde poner el dinero común: cubrir la cena del pescaíto de los socios, mantener el nivel y la cantidad de grupos en directo, hacer las mejoras necesarias en el escenario y estrenar decoración en el patio.",
-    etiqueta: "Socios",
+      "Este año, con un presupuesto más ajustado, el dinero común va a cubrir la cena del pescaíto de los socios, mantener el nivel y la cantidad de grupos en directo, hacer las mejoras necesarias en el escenario y estrenar decoración en el patio.",
+    etiqueta: "Cuentas",
   },
 ];
 
@@ -64,12 +79,15 @@ const PATROCINADORES = [
   { nombre: "Hoyo10", detalle: "Café bar & copas", logo: "assets/patrocinadores/hoyo10.webp" },
   { nombre: "Grup Algaba", detalle: "", logo: "assets/patrocinadores/grup-algaba.webp" },
   { nombre: "Grupo PR Palets", detalle: "", logo: "assets/patrocinadores/pr-palets.webp" },
-  { nombre: "Ecosum", detalle: "Seguridad, construcción y suministros", logo: "assets/patrocinadores/ecosum.webp" },
+  { nombre: "Secosum", detalle: "Seguridad, construcción y suministros", logo: "assets/patrocinadores/secosum.webp" },
   { nombre: "Podas Laura", detalle: "Poda y jardinería", logo: "assets/patrocinadores/podas-laura.webp" },
   { nombre: "Rufino", detalle: "", logo: "assets/patrocinadores/rufino.webp" },
   { nombre: "Velázquez Coca", detalle: "Climatización", logo: "assets/patrocinadores/velazquez-coca.webp" },
   { nombre: "SABORes", detalle: "", logo: "assets/patrocinadores/sabores.webp" },
   { nombre: "José A. Sevilla", detalle: "Construcciones y reformas", logo: "assets/patrocinadores/jose-sevilla.webp" },
+  { nombre: "Andalucía Color", detalle: "Pinturas · Avda. Andalucía 1, La Algaba", logo: "assets/patrocinadores/andalucia-color.webp" },
+  { nombre: "IF Fontanería", detalle: "Instalaciones de fontanería", logo: "assets/patrocinadores/if-fontaneria.webp" },
+  { nombre: "Majaralgaba", detalle: "Estaciones de servicio Repsol", logo: "assets/patrocinadores/majaralgaba.webp" },
 ];
 
 /* Programa: un bloque por día, con eventos ordenados por hora */
@@ -191,6 +209,10 @@ const MENU = {
   pescaito: {
     titulo: "Cena del pescaíto · miércoles 16",
     precio: "30 € por persona",
+    horario: [
+      { hora: "22:00", texto: "Copa de bienvenida" },
+      { hora: "22:30", texto: "Comienza la cena" },
+    ],
     infantil: "Menú infantil (hasta 12 años): lagrimitas, croquetas y hamburguesa con patatas + postre + bebida ilimitada — 15 €",
     bloques: [
       { titulo: "Para empezar", items: ["Almendras fritas"] },

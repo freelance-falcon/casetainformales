@@ -382,6 +382,119 @@ body {
 
 .news-date { font-size: 0.8rem; color: var(--celeste-hondo); font-weight: 700; margin-top: auto; }
 
+/* ---------- Socios ---------- */
+
+.socio-destacado {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: var(--card);
+  border: 1.5px solid var(--flamenco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.3rem 1.4rem;
+  margin-top: 1.2rem;
+}
+
+.socio-pulsera {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--flamenco-suave);
+}
+.socio-pulsera svg {
+  width: 38px;
+  height: 38px;
+  stroke: #d0538a;
+  fill: none;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.socio-texto {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.socio-foto { margin: 0; }
+.socio-foto img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: var(--borde);
+}
+.socio-foto figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--tinta-suave);
+  text-align: center;
+}
+
+.socio-destacado h3 {
+  margin: 0 0 0.25rem;
+  font-family: var(--fuente-display);
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: #c94b7c;
+}
+.socio-destacado p { margin: 0; color: var(--tinta); font-size: 0.95rem; }
+
+.socio-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1rem;
+}
+
+.socio-card {
+  background: var(--card);
+  border: var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.2rem 1.3rem;
+}
+.socio-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--celeste-hondo);
+}
+.socio-card p { margin: 0; color: var(--tinta-suave); font-size: 0.93rem; }
+
+@media (max-width: 480px) {
+  .socio-destacado { padding: 1.1rem; gap: 0.9rem; }
+  .socio-texto { gap: 0.85rem; }
+  .socio-pulsera { width: 52px; height: 52px; }
+  .socio-pulsera svg { width: 32px; height: 32px; }
+  .socio-texto {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.socio-foto { margin: 0; }
+.socio-foto img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: var(--borde);
+}
+.socio-foto figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--tinta-suave);
+  text-align: center;
+}
+
+.socio-destacado h3 { font-size: 1.05rem; }
+}
+
 /* ---------- Programa ---------- */
 
 .day-tabs {
@@ -619,6 +732,29 @@ body {
   color: var(--albero);
   font-size: 1.05rem;
   white-space: nowrap;
+}
+
+.pescaito-horario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.1rem;
+}
+
+.pescaito-hito {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  background: var(--albero-suave);
+  border-radius: 999px;
+  padding: 0.32rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--tinta);
+}
+.pescaito-hito b {
+  font-weight: 800;
+  color: #b9791d;
+  font-variant-numeric: tabular-nums;
 }
 
 .pescaito-bloques {

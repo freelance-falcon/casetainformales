@@ -75,6 +75,34 @@ function pintarNoticias() {
   ).join("");
 }
 
+/* ---------- Socios ---------- */
+
+function pintarSocios() {
+  if (typeof SOCIOS === "undefined") {
+    document.querySelector("#socios").hidden = true;
+    return;
+  }
+  const d = SOCIOS.destacado;
+  $("#socioDestacado").innerHTML = `
+    <div class="socio-texto">
+      <span class="socio-pulsera" aria-hidden="true">
+        <svg viewBox="0 0 64 40"><path d="M8 20 a24 12 0 0 1 48 0 a24 12 0 0 1 -48 0 Z"/><rect x="24" y="12" width="16" height="16" rx="4"/><path d="M28 20 l3 3 l6 -6"/></svg>
+      </span>
+      <div>
+        <h3>${d.titulo}</h3>
+        <p>${d.texto}</p>
+      </div>
+    </div>
+    ${d.imagen ? `<figure class="socio-foto">
+      <img src="${d.imagen}" alt="Pulsera de socio de la caseta Los Informales 2026" loading="lazy" />
+      ${d.pie ? `<figcaption>${d.pie}</figcaption>` : ""}
+    </figure>` : ""}`;
+
+  $("#socioGrid").innerHTML = SOCIOS.puntos
+    .map((p) => `<article class="socio-card"><h3>${p.titulo}</h3><p>${p.texto}</p></article>`)
+    .join("");
+}
+
 /* ---------- Programa ---------- */
 
 function pintarPrograma() {
@@ -164,11 +192,17 @@ function pintarMenu() {
   }
 
   const p = MENU.pescaito;
+  const horario = (p.horario || [])
+    .map(
+      (h) => `<span class="pescaito-hito"><b>${h.hora}</b> ${h.texto}</span>`
+    )
+    .join("");
   card.innerHTML = `
     <div class="pescaito-head">
       <h3>${p.titulo}</h3>
       <span class="pescaito-precio">${p.precio}</span>
     </div>
+    ${horario ? `<div class="pescaito-horario">${horario}</div>` : ""}
     <div class="pescaito-bloques">
       ${p.bloques
         .map(
@@ -407,6 +441,7 @@ if ("serviceWorker" in navigator) {
 
 iniciarCuentaAtras();
 pintarNoticias();
+pintarSocios();
 pintarPrograma();
 pintarMenu();
 pintarPatrocinadores();

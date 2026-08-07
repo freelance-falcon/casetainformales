@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Karla:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=38" />
+  <link rel="stylesheet" href="css/styles.css?v=41" />
 </head>
 <body>
 
@@ -67,7 +67,8 @@
         <span class="nav-dot" aria-hidden="true"></span>Los Informales
       </a>
       <div class="nav-links">
-        <a href="#noticias">Noticias</a>
+        <a href="#socios">Socios</a>
+        <a href="#noticias">Comunicado</a>
         <a href="#programa">Programa</a>
         <a href="#menu">Menú</a>
       </div>
@@ -164,10 +165,19 @@
       </div>
     </section>
 
-    <!-- Noticias -->
+    <!-- Socios -->
+    <section class="section reveal" id="socios">
+      <p class="eyebrow">Si eres de la casa</p>
+      <h2 class="section-title">Socios</h2>
+      <p class="section-sub">Lo que conviene tener claro antes de la feria.</p>
+      <div class="socio-destacado" id="socioDestacado"></div>
+      <div class="socio-grid" id="socioGrid"></div>
+    </section>
+
+    <!-- Comunicado -->
     <section class="section reveal" id="noticias">
-      <p class="eyebrow">La caseta informa</p>
-      <h2 class="section-title">Últimas noticias</h2>
+      <p class="eyebrow">La junta informa</p>
+      <h2 class="section-title">Comunicado</h2>
       <div class="news-grid" id="newsGrid"></div>
     </section>
 
@@ -214,9 +224,13 @@
       <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 L12 4 L20 11 M6 10 V19 H18 V10 M10 19 V14 H14 V19"/></svg>
       <span class="tabbar-label">Inicio</span>
     </a>
+    <a href="#socios" class="tabbar-item" data-sec="socios">
+      <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9.5 A8.5 8.5 0 0 1 20.5 9.5 M3.5 14.5 A8.5 8.5 0 0 0 20.5 14.5 M3.2 9.5 h17.6 v5 H3.2 Z"/></svg>
+      <span class="tabbar-label">Socios</span>
+    </a>
     <a href="#noticias" class="tabbar-item" data-sec="noticias">
       <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10 V14 H7 L14 18 V6 L7 10 Z M17 9 A4.5 4.5 0 0 1 17 15 M19.5 6.5 A8 8 0 0 1 19.5 17.5"/></svg>
-      <span class="tabbar-label">Noticias</span>
+      <span class="tabbar-label">Aviso</span>
     </a>
     <a href="#programa" class="tabbar-item" data-sec="programa">
       <svg class="tabbar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18 V6 L19 4 V16 M9 18 A2.5 2.5 0 1 1 4 18 A2.5 2.5 0 1 1 9 18 M19 16 A2.5 2.5 0 1 1 14 16 A2.5 2.5 0 1 1 19 16 M9 9 L19 7"/></svg>
