@@ -290,9 +290,6 @@ function iniciarReveal() {
 /* ---------- Instalación como app (PWA) ---------- */
 
 function iniciarInstalacion() {
-  const banner = $("#installBanner");
-  const btnBanner = $("#installBtn");
-  const btnCerrar = $("#installDismiss");
   const btnFooter = $("#installFooterBtn");
   const iosSheet = $("#iosSheet");
 
@@ -300,50 +297,26 @@ function iniciarInstalacion() {
   const esStandalone =
     window.matchMedia("(display-mode: standalone)").matches ||
     navigator.standalone === true;
-  const descartado = localStorage.getItem("installDismissed") === "1";
 
   let promptDiferido = null;
 
-  // Android / Chrome: evento nativo de instalación
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     promptDiferido = e;
-    btnFooter.hidden = false;
-    if (!esStandalone && !descartado) banner.hidden = false;
+    if (!esStandalone) btnFooter.hidden = false;
   });
 
-  async function instalar() {
+  btnFooter.addEventListener("click", async () => {
     if (promptDiferido) {
       promptDiferido.prompt();
       await promptDiferido.userChoice;
       promptDiferido = null;
-      banner.hidden = true;
     } else if (esIOS) {
       iosSheet.hidden = false;
     }
-  }
-
-  btnBanner.addEventListener("click", instalar);
-  btnFooter.addEventListener("click", instalar);
-  btnCerrar.addEventListener("click", () => {
-    banner.hidden = true;
-    localStorage.setItem("installDismissed", "1");
   });
 
-  // iOS Safari: no hay evento nativo → sugerimos con nuestras instrucciones
-  if (esIOS && !esStandalone) {
-    btnFooter.hidden = false;
-    if (!descartado) {
-      setTimeout(() => {
-        banner.hidden = false;
-        btnBanner.textContent = "Ver cómo";
-      }, 2500);
-    }
-    btnBanner.addEventListener("click", () => {
-      banner.hidden = true;
-      iosSheet.hidden = false;
-    });
-  }
+  if (esIOS && !esStandalone) btnFooter.hidden = false;
 
   $("#iosClose").addEventListener("click", () => (iosSheet.hidden = true));
   iosSheet.addEventListener("click", (e) => {
