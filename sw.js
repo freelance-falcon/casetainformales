@@ -1,13 +1,15 @@
 /* Service worker — cache básico para funcionar sin conexión */
 
-const CACHE = "informales-v45";
+const CACHE = "informales-v46";
 
 const PRECACHE = [
   "./",
   "index.html",
+  "carta.html",
   "css/styles.css",
   "js/app.js",
   "js/data.js",
+  "js/layout.js",
   "manifest.webmanifest",
   "assets/header-900.webp",
   "assets/header-1800.webp",
@@ -49,7 +51,15 @@ self.addEventListener("fetch", (e) => {
           caches.open(CACHE).then((c) => c.put(e.request, copia));
           return res;
         })
-        .catch(() => caches.match(e.request).then((r) => r || caches.match("index.html")))
+        .catch(() =>
+          caches.match(e.request).then(
+            (r) =>
+              r ||
+              caches.match(
+                url.pathname.includes("carta") ? "carta.html" : "index.html"
+              )
+          )
+        )
     );
   } else {
     e.respondWith(

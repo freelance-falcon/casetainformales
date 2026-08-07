@@ -866,6 +866,51 @@ body {
   color: var(--tinta-suave);
 }
 
+/* ---------- Resumen de la carta en la portada ---------- */
+
+.carta-aviso {
+  background: var(--card);
+  border: var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.4rem;
+  margin-top: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.carta-aviso::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 7px;
+  background: repeating-linear-gradient(90deg, var(--albero) 0 16px, var(--card) 16px 32px);
+}
+
+.carta-resumen {
+  margin: 0.5rem 0 0.7rem;
+  font-size: 1rem;
+  color: var(--tinta);
+}
+
+.carta-alergenos {
+  margin: 0 0 1.1rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--celeste-claro);
+  font-size: 0.85rem;
+  color: var(--tinta-suave);
+}
+
+/* enlace de vuelta en la página de la carta */
+.volver {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--celeste-hondo);
+  text-decoration: none;
+}
+.volver:hover { text-decoration: underline; }
+
 /* ---------- Alérgenos ---------- */
 
 .menu-nota-alergenos {

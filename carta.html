@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>La carta · Caseta Los Informales</title>
+  <meta name="description" content="Carta completa de la caseta Los Informales: precios de barra y cocina, alérgenos y menú de la cena del pescaíto." />
+  <meta name="theme-color" content="#f7fbfe" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Los Informales" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Karla:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css?v=46" />
+</head>
+<body>
+
+  <!-- Cabecera con la imagen de la caseta -->
+  <header class="hero" id="inicio">
+    <img
+      class="hero-img"
+      src="assets/header-1800.webp"
+      srcset="assets/header-900.webp 900w, assets/header-1800.webp 1800w"
+      sizes="100vw"
+      alt="Caseta Los Informales — Feria de La Algaba" />
+  </header>
+
+  <main>
+
+    <section class="section" id="menu">
+      <a class="volver" href="./">← Volver a la portada</a>
+      <p class="eyebrow">De barra y cocina</p>
+      <h2 class="section-title">La carta</h2>
+      <p class="section-sub">Precios de la caseta y menú de la cena del pescaíto.</p>
+      <div class="pescaito-card" id="pescaitoCard"></div>
+      <div class="menu-acordeon" id="menuAcordeon"></div>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

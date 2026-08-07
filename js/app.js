@@ -247,6 +247,25 @@ function pintarMenu() {
       .join("") + `<p class="menu-nota">${MENU.nota}</p>`;
 }
 
+/* ---------- Resumen de la carta en la portada ---------- */
+
+function pintarAvisoCarta() {
+  const caja = $("#cartaAviso");
+  if (!caja || typeof MENU === "undefined") return;
+
+  const platos = MENU.secciones.reduce((n, s) => n + s.items.length, 0);
+  const p = MENU.pescaito;
+
+  caja.innerHTML = `
+    <p class="carta-resumen">
+      <strong>${platos} platos y bebidas</strong> con sus precios y alérgenos,
+      más el menú de la <strong>cena del pescaíto</strong> del miércoles 16
+      (${p.precio}).
+    </p>
+    <p class="carta-alergenos">${MENU.notaAlergenos}</p>
+    <a class="btn btn-primary" href="carta">Ver la carta completa</a>`;
+}
+
 /* ---------- Patrocinadores ---------- */
 
 function pintarPatrocinadores() {
@@ -505,15 +524,26 @@ if ("serviceWorker" in navigator) {
 
 /* ---------- Arranque ---------- */
 
-iniciarCuentaAtras();
-pintarNoticias();
-pintarSocios();
-pintarPrograma();
-pintarMenu();
-pintarPatrocinadores();
-iniciarNav();
-iniciarReveal();
+const PAGINA = document.querySelector("#socios") ? "portada" : "carta";
+
+pintarLayout(PAGINA);
+
+if (PAGINA === "portada") {
+  iniciarCuentaAtras();
+  pintarNoticias();
+  pintarSocios();
+  pintarPrograma();
+  pintarAvisoCarta();
+  pintarPatrocinadores();
+  iniciarNav();
+  iniciarReveal();
+  iniciarCarteles();
+  iniciarFichas();
+  iniciarAmbiente();
+}
+
+if (PAGINA === "carta") {
+  pintarMenu();
+}
+
 iniciarInstalacion();
-iniciarCarteles();
-iniciarFichas();
-iniciarAmbiente();
