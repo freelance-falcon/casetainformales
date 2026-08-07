@@ -33,27 +33,6 @@ const NOTICIAS = [
       "Este año, con un presupuesto más ajustado, la junta ha decidido dónde poner el dinero común: cubrir la cena del pescaíto de los socios, mantener el nivel y la cantidad de grupos en directo, hacer las mejoras necesarias en el escenario y estrenar decoración en el patio.",
     etiqueta: "Socios",
   },
-  {
-    fecha: "2026-07-28",
-    titulo: "¡Ya tenemos cartel de actuaciones!",
-    texto:
-      "Cerrado el programa completo de la feria. Grupos en directo todas las noches y sesión de DJ los fines de semana. Echa un vistazo al programa 👇",
-    etiqueta: "Programa",
-  },
-  {
-    fecha: "2026-07-15",
-    titulo: "Nueva decoración de la caseta",
-    texto:
-      "Este año estrenamos toldo, iluminación nueva y más espacio en la pista. Os va a encantar.",
-    etiqueta: "Caseta",
-  },
-  {
-    fecha: "2026-07-01",
-    titulo: "Abono de socios disponible",
-    texto:
-      "Ya puedes recoger tu abono de socio. Pregunta a cualquiera de la junta o escríbenos por Instagram.",
-    etiqueta: "Socios",
-  },
 ];
 
 /* Patrocinadores: nombre, detalle opcional y enlace opcional.
