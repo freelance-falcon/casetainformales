@@ -255,15 +255,79 @@ function pintarPatrocinadores() {
     document.querySelector("#patrocinadores").hidden = true;
     return;
   }
-  grid.innerHTML = PATROCINADORES.map((p) => {
+  grid.innerHTML = PATROCINADORES.map((p, i) => {
     const contenido = `
       ${p.logo ? `<span class="sponsor-marco"><img class="sponsor-logo" src="${p.logo}" alt="" loading="lazy" /></span>` : ""}
       <span class="sponsor-nombre">${p.nombre}</span>
       ${p.detalle ? `<span class="sponsor-detalle">${p.detalle}</span>` : ""}`;
+    if (p.ficha) {
+      return `<button class="sponsor-card sponsor-card--ficha" data-ficha="${i}">
+        ${contenido}<span class="sponsor-vermas">Ver más</span>
+      </button>`;
+    }
     return p.url
       ? `<a class="sponsor-card" href="${p.url}" target="_blank" rel="noopener">${contenido}</a>`
       : `<div class="sponsor-card">${contenido}</div>`;
   }).join("");
+}
+
+/* ---------- Ficha de patrocinador ---------- */
+
+const ICONOS_ENLACE = {
+  web: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12 h18 M12 3 a14 14 0 0 1 0 18 a14 14 0 0 1 0 -18"/></svg>',
+  linkedin: '<svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 11 v6 M8 8 v0.1 M12 17 v-6 M12 13 a2.5 2.5 0 0 1 4.5 1.5 V17"/></svg>',
+  tel: '<svg viewBox="0 0 24 24"><path d="M6 3.5 h3 l1.5 4 l-2 1.5 a11 11 0 0 0 6 6 l1.5 -2 l4 1.5 v3 a2 2 0 0 1 -2.2 2 C11 19.5 4.5 13 4 5.7 A2 2 0 0 1 6 3.5 Z"/></svg>',
+  email: '<svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.6 7 L12 13 L20.4 7"/></svg>',
+};
+
+function iniciarFichas() {
+  const modal = $("#fichaModal");
+  const cuerpo = $("#fichaCuerpo");
+
+  function abrir(p) {
+    const f = p.ficha;
+    cuerpo.innerHTML = `
+      ${p.logo ? `<span class="ficha-logo"><img src="${p.logo}" alt="" /></span>` : ""}
+      <h3 class="ficha-nombre">${p.nombre}</h3>
+      ${p.detalle ? `<p class="ficha-detalle">${p.detalle}</p>` : ""}
+      <p class="ficha-resumen">${f.resumen}</p>
+      ${f.servicios && f.servicios.length
+        ? `<ul class="ficha-servicios">${f.servicios.map((s) => `<li>${s}</li>`).join("")}</ul>`
+        : ""}
+      ${f.enlaces && f.enlaces.length
+        ? `<div class="ficha-enlaces">${f.enlaces
+            .map(
+              (e) =>
+                `<a class="ficha-enlace" href="${e.url}"${
+                  e.tipo === "web" || e.tipo === "linkedin"
+                    ? ' target="_blank" rel="noopener"'
+                    : ""
+                }>${ICONOS_ENLACE[e.tipo] || ""}<span>${e.texto}</span></a>`
+            )
+            .join("")}</div>`
+        : ""}`;
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+
+  function cerrar() {
+    modal.hidden = true;
+    cuerpo.innerHTML = "";
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("click", (ev) => {
+    const card = ev.target.closest(".sponsor-card--ficha");
+    if (card) {
+      abrir(PATROCINADORES[Number(card.dataset.ficha)]);
+      return;
+    }
+    if (!modal.hidden && (ev.target === modal || ev.target.closest(".ficha-close"))) cerrar();
+  });
+
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape" && !modal.hidden) cerrar();
+  });
 }
 
 /* ---------- Navegación: sombra + sección activa ---------- */
@@ -449,4 +513,5 @@ iniciarNav();
 iniciarReveal();
 iniciarInstalacion();
 iniciarCarteles();
+iniciarFichas();
 iniciarAmbiente();

@@ -77,7 +77,27 @@ const PATROCINADORES = [
   { nombre: "Algabterra", detalle: "Excavaciones y movimiento de tierras", logo: "assets/patrocinadores/algabterra.webp" },
   { nombre: "Tu Mesa de Siempre", detalle: "Catering", logo: "assets/patrocinadores/tu-mesa.webp" },
   { nombre: "Hoyo10", detalle: "Café bar & copas", logo: "assets/patrocinadores/hoyo10.webp" },
-  { nombre: "Grup Algaba", detalle: "", logo: "assets/patrocinadores/grup-algaba.webp" },
+  {
+    nombre: "Grup Algaba",
+    detalle: "Andamios, lonas y maquinaria",
+    logo: "assets/patrocinadores/grup-algaba.webp",
+    ficha: {
+      resumen:
+        "Servicio integral para obra basado en la seguridad, la planificación y la adaptación a cada proyecto, con oficina técnica propia y transporte para responder con agilidad.",
+      servicios: [
+        "Andamios: soluciones seguras para trabajos en altura, rehabilitación y accesos complejos.",
+        "Lonas: sistemas de protección, cerramientos y cubiertas.",
+        "Maquinaria: suministro de equipos para el desarrollo de los trabajos.",
+        "Protectores de andamio ALGABA-ECO, desarrollados por ellos para mejorar la seguridad.",
+      ],
+      enlaces: [
+        { tipo: "web", texto: "andamioslaalgaba.es", url: "https://www.andamioslaalgaba.es/" },
+        { tipo: "linkedin", texto: "LinkedIn", url: "https://www.linkedin.com/company/grupalgaba/" },
+        { tipo: "tel", texto: "93 638 60 79", url: "tel:+34936386079" },
+        { tipo: "email", texto: "info@andamioslaalgaba.es", url: "mailto:info@andamioslaalgaba.es" },
+      ],
+    },
+  },
   { nombre: "Grupo PR Palets", detalle: "", logo: "assets/patrocinadores/pr-palets.webp" },
   { nombre: "Secosum", detalle: "Seguridad, construcción y suministros", logo: "assets/patrocinadores/secosum.webp" },
   { nombre: "Podas Laura", detalle: "Poda y jardinería", logo: "assets/patrocinadores/podas-laura.webp" },
