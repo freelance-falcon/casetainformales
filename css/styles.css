@@ -1044,7 +1044,6 @@ a.sponsor-card:hover,
   max-height: 100%;
   max-width: 88%;
   object-fit: contain;
-  border-radius: 8px;
 }
 
 .ficha-nombre {
