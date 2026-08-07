@@ -38,6 +38,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :focus-visible {
   outline: 3px solid var(--celeste);
   outline-offset: 2px;
@@ -959,8 +969,8 @@ a.sponsor-card:hover,
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 76px;
-  margin-bottom: 0.8rem;
+  height: 96px;
+  margin-bottom: 0.55rem;
 }
 
 .sponsor-logo {
@@ -968,7 +978,6 @@ a.sponsor-card:hover,
   max-width: 100%;
   width: auto;
   object-fit: contain;
-  border-radius: 6px;
 }
 
 .sponsor-nombre {
@@ -979,16 +988,15 @@ a.sponsor-card:hover,
 }
 
 .sponsor-detalle {
-  font-size: 0.78rem;
+  font-size: 0.83rem;
   line-height: 1.35;
   color: var(--tinta-suave);
-  margin-top: 0.15rem;
 }
 
 @media (max-width: 480px) {
   .sponsor-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
   .sponsor-card { padding: 0.85rem 0.6rem 0.95rem; }
-  .sponsor-marco { height: 62px; margin-bottom: 0.6rem; }
+  .sponsor-marco { height: 76px; margin-bottom: 0.45rem; }
   .sponsor-nombre { font-size: 0.88rem; }
   .sponsor-detalle { font-size: 0.73rem; }
 }
