@@ -76,7 +76,26 @@ const NOTICIAS = [
 const PATROCINADORES = [
   { nombre: "Algabterra", detalle: "Excavaciones y movimiento de tierras", logo: "assets/patrocinadores/algabterra.webp" },
   { nombre: "Tu Mesa de Siempre", detalle: "Catering", logo: "assets/patrocinadores/tu-mesa.webp" },
-  { nombre: "Hoyo10", detalle: "Café bar & copas", logo: "assets/patrocinadores/hoyo10.webp" },
+  {
+    nombre: "Hoyo10",
+    detalle: "Café bar & copas · La Algaba",
+    logo: "assets/patrocinadores/hoyo10.webp",
+    ficha: {
+      resumen:
+        "Lo que empieza como un café a media tarde termina en copa y cachimba. Local con terraza en la calle Peligro, con actuaciones en directo en las fechas grandes.",
+      servicios: [
+        "Coctelería propia.",
+        "Cachimbas.",
+        "Tres pantallas para ver todo el fútbol.",
+        "Terraza y actuaciones en directo en fechas señaladas.",
+      ],
+      enlaces: [
+        { tipo: "mapa", texto: "C/ Peligro, 9 · La Algaba", url: "https://maps.google.com/?q=Calle+Peligro+9,+La+Algaba,+Sevilla" },
+        { tipo: "tel", texto: "661 85 54 14", url: "tel:+34661855414" },
+        { tipo: "instagram", texto: "@hoyo10algaba", url: "https://www.instagram.com/hoyo10algaba" },
+      ],
+    },
+  },
   {
     nombre: "Grup Algaba",
     detalle: "Andamios, lonas y maquinaria",
@@ -106,7 +125,26 @@ const PATROCINADORES = [
   { nombre: "SABORes", detalle: "", logo: "assets/patrocinadores/sabores.webp" },
   { nombre: "José A. Sevilla", detalle: "Construcciones y reformas", logo: "assets/patrocinadores/jose-sevilla.webp" },
   { nombre: "Andalucía Color", detalle: "Pinturas · Avda. Andalucía 1, La Algaba", logo: "assets/patrocinadores/andalucia-color.webp" },
-  { nombre: "IF Fontanería", detalle: "Instalaciones de fontanería", logo: "assets/patrocinadores/if-fontaneria.webp" },
+  {
+    nombre: "IF Fontanería",
+    detalle: "Instalaciones de fontanería",
+    logo: "assets/patrocinadores/if-fontaneria.webp",
+    ficha: {
+      resumen:
+        "Empresa de fontanería consolidada en el sector desde hace más de 15 años, dedicada a la instalación, reparación y mantenimiento de sistemas de fontanería, con amplia experiencia también en mantenimiento de piscinas. La profesionalidad y la formalidad quedan garantizadas.",
+      servicios: [
+        "Instalación, reparación y mantenimiento de fontanería.",
+        "Mantenimiento de piscinas.",
+        "Servicio en hogares, empresas y edificios comerciales.",
+        "Diagnóstico de fugas, obstrucciones y bajadas de presión, con asesoramiento en mantenimiento preventivo.",
+        "Presupuesto sin ningún compromiso.",
+      ],
+      enlaces: [
+        { tipo: "tel", texto: "685 24 96 08", url: "tel:+34685249608" },
+        { tipo: "email", texto: "ifontdm@hotmail.com", url: "mailto:ifontdm@hotmail.com" },
+      ],
+    },
+  },
   { nombre: "Majaralgaba", detalle: "Estaciones de servicio Repsol", logo: "assets/patrocinadores/majaralgaba.webp" },
 ];
 

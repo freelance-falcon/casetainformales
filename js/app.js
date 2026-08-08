@@ -299,6 +299,8 @@ const ICONOS_ENLACE = {
   linkedin: '<svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 11 v6 M8 8 v0.1 M12 17 v-6 M12 13 a2.5 2.5 0 0 1 4.5 1.5 V17"/></svg>',
   tel: '<svg viewBox="0 0 24 24"><path d="M6 3.5 h3 l1.5 4 l-2 1.5 a11 11 0 0 0 6 6 l1.5 -2 l4 1.5 v3 a2 2 0 0 1 -2.2 2 C11 19.5 4.5 13 4 5.7 A2 2 0 0 1 6 3.5 Z"/></svg>',
   email: '<svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.6 7 L12 13 L20.4 7"/></svg>',
+  mapa: '<svg viewBox="0 0 24 24"><path d="M12 21 s7 -7.2 7 -12 a7 7 0 0 0 -14 0 c0 4.8 7 12 7 12 Z"/><circle cx="12" cy="9" r="2.6"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>',
 };
 
 function iniciarFichas() {
@@ -320,7 +322,7 @@ function iniciarFichas() {
             .map(
               (e) =>
                 `<a class="ficha-enlace" href="${e.url}"${
-                  e.tipo === "web" || e.tipo === "linkedin"
+                  ["web", "linkedin", "instagram", "mapa"].includes(e.tipo)
                     ? ' target="_blank" rel="noopener"'
                     : ""
                 }>${ICONOS_ENLACE[e.tipo] || ""}<span>${e.texto}</span></a>`
