@@ -221,10 +221,11 @@ const PATROCINADORES = [
   },
   {
     nombre: "SABORes La Algaba",
-    detalle: "Cocina y reservas · La Algaba",
+    detalle: "Restaurante · La Algaba",
     logo: "assets/patrocinadores/sabores.webp",
     ficha: {
-      resumen: "Buena mesa en La Algaba, en la calle Mercurio. Reserva por teléfono.",
+      resumen:
+        "Restaurante en la calle Mercurio de La Algaba. Reserva mesa por teléfono y síguelos en Instagram para ver sus platos y novedades.",
       servicios: [],
       enlaces: [
         { tipo: "mapa", texto: "C/ Mercurio, 29 · La Algaba", url: "https://maps.google.com/?q=Calle+Mercurio+29,+La+Algaba,+Sevilla" },
