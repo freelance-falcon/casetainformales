@@ -74,7 +74,24 @@ const NOTICIAS = [
 /* Patrocinadores: nombre, detalle opcional y enlace opcional.
    Si algún día hay logos: añade "logo": "assets/patrocinadores/nombre.png" */
 const PATROCINADORES = [
-  { nombre: "Algabterra", detalle: "Excavaciones y movimiento de tierras", logo: "assets/patrocinadores/algabterra.webp" },
+  {
+    nombre: "Algabterra",
+    detalle: "Excavaciones y movimiento de tierras",
+    logo: "assets/patrocinadores/algabterra.webp",
+    ficha: {
+      resumen:
+        "Excavaciones y movimiento de tierras con maquinaria de calidad. Profesionalidad, seriedad y trabajos garantizados en cada obra.",
+      servicios: [
+        "Excavaciones y movimiento de tierras.",
+        "Maquinaria de calidad y personal profesional.",
+        "Trabajos garantizados, con compromiso y seriedad.",
+      ],
+      enlaces: [
+        { tipo: "tel", texto: "672 041 292", url: "tel:+34672041292" },
+        { tipo: "email", texto: "Algabterra@gmail.com", url: "mailto:Algabterra@gmail.com" },
+      ],
+    },
+  },
   { nombre: "Tu Mesa de Siempre", detalle: "Catering", logo: "assets/patrocinadores/tu-mesa.webp" },
   {
     nombre: "Hoyo10",
@@ -119,9 +136,45 @@ const PATROCINADORES = [
   },
   { nombre: "Grupo PR Palets", detalle: "", logo: "assets/patrocinadores/pr-palets.webp" },
   { nombre: "Secosum", detalle: "Seguridad, construcción y suministros", logo: "assets/patrocinadores/secosum.webp" },
-  { nombre: "Podas Laura", detalle: "Poda y jardinería", logo: "assets/patrocinadores/podas-laura.webp" },
+  {
+    nombre: "Podas Laura SL",
+    detalle: "Jardinería y podas · La Algaba",
+    logo: "assets/patrocinadores/podas-laura.webp",
+    ficha: {
+      resumen:
+        "Jardinería y podas en La Algaba, incluidos los trabajos en altura con técnicas de trepa para árboles de gran porte.",
+      servicios: [
+        "Poda de árboles y palmeras, también en altura.",
+        "Mantenimiento y cuidado de jardines.",
+      ],
+      enlaces: [
+        { tipo: "mapa", texto: "C/ Senda del Medio, 18 · La Algaba", url: "https://maps.google.com/?q=Calle+Senda+del+Medio+18,+La+Algaba,+Sevilla" },
+        { tipo: "tel", texto: "671 517 863", url: "tel:+34671517863" },
+        { tipo: "email", texto: "podaslaura30@gmail.com", url: "mailto:podaslaura30@gmail.com" },
+        { tipo: "web", texto: "podaslaura.com", url: "https://www.podaslaura.com" },
+      ],
+    },
+  },
   { nombre: "Rufino", detalle: "", logo: "assets/patrocinadores/rufino.webp" },
-  { nombre: "Velázquez Coca", detalle: "Climatización", logo: "assets/patrocinadores/velazquez-coca.webp" },
+  {
+    nombre: "Velázquez Coca",
+    detalle: "Climatización y energía solar térmica",
+    logo: "assets/patrocinadores/velazquez-coca.webp",
+    ficha: {
+      resumen:
+        "Mantenimiento, reparación e instalación de equipos de climatización y de energía solar térmica.",
+      servicios: [
+        "Mantenimiento, instalación y reparación de equipos de climatización.",
+        "Mantenimiento, instalación y reparación de energía solar térmica.",
+        "Suministro de equipos, para comodidad del cliente.",
+        "Maquinaria profesional que mejora la seguridad de trabajadores y clientes.",
+      ],
+      enlaces: [
+        { tipo: "tel", texto: "691 309 939", url: "tel:+34691309939" },
+        { tipo: "email", texto: "jvelazquezcoca@gmail.com", url: "mailto:jvelazquezcoca@gmail.com" },
+      ],
+    },
+  },
   { nombre: "SABORes", detalle: "", logo: "assets/patrocinadores/sabores.webp" },
   { nombre: "José A. Sevilla", detalle: "Construcciones y reformas", logo: "assets/patrocinadores/jose-sevilla.webp" },
   { nombre: "Andalucía Color", detalle: "Pinturas · Avda. Andalucía 1, La Algaba", logo: "assets/patrocinadores/andalucia-color.webp" },
@@ -145,7 +198,26 @@ const PATROCINADORES = [
       ],
     },
   },
-  { nombre: "Majaralgaba", detalle: "Estaciones de servicio Repsol", logo: "assets/patrocinadores/majaralgaba.webp" },
+  {
+    nombre: "Majaralgaba",
+    detalle: "Estaciones de servicio Repsol",
+    logo: "assets/patrocinadores/majaralgaba.webp",
+    ficha: {
+      resumen:
+        "Estaciones de servicio Repsol en La Algaba y La Rinconada, con tienda, boxes de lavado y recarga eléctrica.",
+      servicios: [
+        "Venta de carburante y AdBlue.",
+        "Recarga eléctrica para vehículos.",
+        "Tienda Supercor.",
+        "Boxes de lavado, túnel y aspiradoras.",
+      ],
+      enlaces: [
+        { tipo: "mapa", texto: "E.S. La Algaba · Ctra. A-8079 PK-2", url: "https://maps.google.com/?q=Estacion+de+servicio+Repsol+La+Algaba+A-8079" },
+        { tipo: "tel", texto: "955 78 80 01 · La Algaba", url: "tel:+34955788001" },
+        { tipo: "tel", texto: "954 90 59 30 · La Rinconada", url: "tel:+34954905930" },
+      ],
+    },
+  },
 ];
 
 /* Programa: un bloque por día, con eventos ordenados por hora */

@@ -1090,7 +1090,7 @@ a.sponsor-card:hover,
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
+  height: 110px;
   margin-bottom: 1rem;
 }
 .ficha-logo img {
@@ -1178,7 +1178,7 @@ a.sponsor-card:hover,
 
 @media (max-width: 480px) {
   .ficha-card { padding: 1.5rem 1.1rem 1.2rem; }
-  .ficha-logo { height: 66px; }
+  .ficha-logo { height: 92px; }
   .ficha-nombre { font-size: 1.15rem; }
 }
 
