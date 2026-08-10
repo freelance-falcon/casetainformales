@@ -135,7 +135,30 @@ const PATROCINADORES = [
     },
   },
   { nombre: "Grupo PR Palets", detalle: "", logo: "assets/patrocinadores/pr-palets.webp" },
-  { nombre: "Secosum", detalle: "Seguridad, construcción y suministros", logo: "assets/patrocinadores/secosum.webp" },
+  {
+    nombre: "Secosum",
+    detalle: "Seguridad y suministros medioambientales",
+    logo: "assets/patrocinadores/secosum.webp",
+    ficha: {
+      resumen:
+        "Empresa de La Algaba dedicada a la seguridad y el medioambiente, centrada en el suministro industrial sobre una base innovadora y eficiente en el sector andaluz.",
+      servicios: [
+        "Seguridad industrial: sistemas de bloqueo y control.",
+        "Control de derrames: alfombras, esteras y productos absorbentes.",
+        "Iluminación LED, interior y exterior.",
+        "Ferretería y herramienta: martillos, destornilladores, sierras y taladros.",
+        "Manipulación y almacenaje: remolques, elevadores, contenedores, carretillas y grúas.",
+        "Escaleras, guantes y equipos de protección.",
+        "Estudio energético gratuito de agua, luz y gas.",
+      ],
+      enlaces: [
+        { tipo: "web", texto: "secosum.com", url: "https://secosum.com/" },
+        { tipo: "mapa", texto: "C/ Julio Romero de Torres, s/n · La Algaba", url: "https://maps.google.com/?q=Calle+Julio+Romero+de+Torres,+La+Algaba,+Sevilla" },
+        { tipo: "tel", texto: "605 09 75 74", url: "tel:+34605097574" },
+        { tipo: "email", texto: "srs@secosum.com", url: "mailto:srs@secosum.com" },
+      ],
+    },
+  },
   {
     nombre: "Podas Laura SL",
     detalle: "Jardinería y podas · La Algaba",
@@ -177,7 +200,28 @@ const PATROCINADORES = [
   },
   { nombre: "SABORes", detalle: "", logo: "assets/patrocinadores/sabores.webp" },
   { nombre: "José A. Sevilla", detalle: "Construcciones y reformas", logo: "assets/patrocinadores/jose-sevilla.webp" },
-  { nombre: "Andalucía Color", detalle: "Pinturas · Avda. Andalucía 1, La Algaba", logo: "assets/patrocinadores/andalucia-color.webp" },
+  {
+    nombre: "Andalucía Color",
+    detalle: "Pinturas y decoración · La Algaba",
+    logo: "assets/patrocinadores/andalucia-color.webp",
+    ficha: {
+      resumen:
+        "Dale color a tu tierra. Tienda de pinturas en La Algaba, con asesoramiento para elegir producto, color y acabado en cada trabajo.",
+      servicios: [
+        "Pintura para interior y exterior.",
+        "Esmaltes, barnices y protectores para madera y metal.",
+        "Impermeabilizantes y revestimientos de fachada.",
+        "Preparación de colores a medida.",
+        "Herramienta y material de pintura: rodillos, brochas, cintas y protecciones.",
+      ],
+      enlaces: [
+        { tipo: "mapa", texto: "Avda. Andalucía, 1 · La Algaba", url: "https://maps.google.com/?q=Avenida+Andalucia+1,+41980+La+Algaba,+Sevilla" },
+        { tipo: "tel", texto: "955 11 57 41", url: "tel:+34955115741" },
+        { tipo: "tel", texto: "617 00 25 73", url: "tel:+34617002573" },
+        { tipo: "email", texto: "andaluciacolor@gmail.com", url: "mailto:andaluciacolor@gmail.com" },
+      ],
+    },
+  },
   {
     nombre: "IF Fontanería",
     detalle: "Instalaciones de fontanería",
