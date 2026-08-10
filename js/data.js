@@ -305,7 +305,7 @@ const PROGRAMA = [
     dia: "Domingo 20",
     fecha: "2026-09-20",
     eventos: [
-      { hora: "16:30", nombre: "Josemi Carrasco", tipo: "directo" },
+      { hora: "16:30", nombre: "Josemi Carrasco", tipo: "directo", cartel: "assets/carteles/josemi-carrasco.webp" },
     ],
   },
 ];
