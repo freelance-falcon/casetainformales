@@ -103,6 +103,71 @@ function pintarSocios() {
     .join("");
 }
 
+/* ---------- Carrusel reutilizable ---------- */
+
+function montarCarrusel(pista, etiqueta) {
+  const items = [...pista.children];
+  if (items.length < 2) return;
+
+  pista.classList.add("carrusel-pista");
+  pista.setAttribute("tabindex", "0");
+  pista.setAttribute("role", "group");
+  pista.setAttribute("aria-label", `${etiqueta} — desliza para ver más`);
+
+  const marco = document.createElement("div");
+  marco.className = "carrusel";
+  pista.parentNode.insertBefore(marco, pista);
+  marco.appendChild(pista);
+
+  marco.insertAdjacentHTML(
+    "beforeend",
+    `<div class="carrusel-barra">
+       <button class="carrusel-flecha" data-dir="-1" aria-label="Anterior">
+         <svg viewBox="0 0 24 24"><path d="M15 5 L8 12 L15 19"/></svg>
+       </button>
+       <div class="carrusel-puntos">
+         ${items.map((_, i) => `<button class="carrusel-punto" data-i="${i}" aria-label="Ir a ${i + 1} de ${items.length}"></button>`).join("")}
+       </div>
+       <button class="carrusel-flecha" data-dir="1" aria-label="Siguiente">
+         <svg viewBox="0 0 24 24"><path d="M9 5 L16 12 L9 19"/></svg>
+       </button>
+     </div>`
+  );
+
+  const puntos = [...marco.querySelectorAll(".carrusel-punto")];
+  const flechas = [...marco.querySelectorAll(".carrusel-flecha")];
+
+  const actual = () => {
+    let cerca = 0;
+    let dist = Infinity;
+    items.forEach((el, i) => {
+      const d = Math.abs(el.offsetLeft - pista.scrollLeft);
+      if (d < dist) { dist = d; cerca = i; }
+    });
+    return cerca;
+  };
+
+  function refrescar() {
+    const i = actual();
+    puntos.forEach((p, n) => p.classList.toggle("activo", n === i));
+    const finLista = pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 4;
+    flechas[0].disabled = pista.scrollLeft <= 4;
+    flechas[1].disabled = finLista;
+    marco.classList.toggle("hay-mas", !finLista);
+  }
+
+  const irA = (i) =>
+    pista.scrollTo({ left: items[Math.max(0, Math.min(items.length - 1, i))].offsetLeft, behavior: "smooth" });
+
+  puntos.forEach((p) => p.addEventListener("click", () => irA(Number(p.dataset.i))));
+  flechas.forEach((f) =>
+    f.addEventListener("click", () => irA(actual() + Number(f.dataset.dir)))
+  );
+  pista.addEventListener("scroll", refrescar, { passive: true });
+  window.addEventListener("resize", refrescar);
+  refrescar();
+}
+
 /* ---------- Programa ---------- */
 
 function pintarPrograma() {
@@ -186,12 +251,10 @@ function pintarPrograma() {
 function pintarMenu() {
   const card = $("#pescaitoCard");
   const aco = $("#menuAcordeon");
-  if (typeof MENU === "undefined") {
-    document.querySelector("#menu").hidden = true;
-    return;
-  }
+  if (typeof MENU === "undefined") return;
 
   const p = MENU.pescaito;
+  if (card) {
   const horario = (p.horario || [])
     .map(
       (h) => `<span class="pescaito-hito"><b>${h.hora}</b> ${h.texto}</span>`
@@ -216,6 +279,9 @@ function pintarMenu() {
     </div>
     <p class="pescaito-infantil">${p.infantil}</p>
     <p class="pescaito-infantil">La carta de la cena no detalla alérgenos: si tienes alergia, avísanos al reservar.</p>`;
+  }
+
+  if (!aco) return;
 
   const chips = (al) =>
     al && al.length
@@ -263,7 +329,10 @@ function pintarAvisoCarta() {
       (${p.precio}).
     </p>
     <p class="carta-alergenos">${MENU.notaAlergenos}</p>
-    <a class="btn btn-primary" href="carta">Ver la carta completa</a>`;
+    <div class="carta-botones">
+      <a class="btn btn-primary" href="carta">Ver la carta</a>
+      <a class="btn btn-ghost" href="pescaito">Cena del pescaíto</a>
+    </div>`;
 }
 
 /* ---------- Patrocinadores ---------- */
@@ -526,7 +595,11 @@ if ("serviceWorker" in navigator) {
 
 /* ---------- Arranque ---------- */
 
-const PAGINA = document.querySelector("#socios") ? "portada" : "carta";
+const PAGINA = document.querySelector("#socios")
+  ? "portada"
+  : document.querySelector("#menuAcordeon")
+    ? "carta"
+    : "pescaito";
 
 pintarLayout(PAGINA);
 
@@ -534,6 +607,8 @@ if (PAGINA === "portada") {
   iniciarCuentaAtras();
   pintarNoticias();
   pintarSocios();
+  montarCarrusel($("#newsGrid"), "Comunicado");
+  montarCarrusel($("#socioGrid"), "Información para socios");
   pintarPrograma();
   pintarAvisoCarta();
   pintarPatrocinadores();
@@ -544,7 +619,7 @@ if (PAGINA === "portada") {
   iniciarAmbiente();
 }
 
-if (PAGINA === "carta") {
+if (PAGINA !== "portada") {
   pintarMenu();
 }
 

@@ -342,12 +342,7 @@ body {
 
 /* ---------- Noticias ---------- */
 
-.news-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-top: 1.2rem;
-}
+.news-grid { margin-top: 1.2rem; }
 
 .news-card {
   background: var(--card);
@@ -454,12 +449,7 @@ body {
 }
 .socio-destacado p { margin: 0; color: var(--tinta); font-size: 0.95rem; }
 
-.socio-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-top: 1rem;
-}
+.socio-grid { margin-top: 1rem; }
 
 .socio-card {
   background: var(--card);
@@ -501,6 +491,103 @@ body {
 }
 
 .socio-destacado h3 { font-size: 1.05rem; }
+}
+
+/* ---------- Carrusel ---------- */
+
+.carrusel { position: relative; }
+
+.carrusel-pista {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 0.15rem;
+  padding: 0.2rem 0.15rem 0.4rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.carrusel-pista::-webkit-scrollbar { display: none; }
+
+/* cada tarjeta ocupa casi todo el ancho y deja ver la siguiente */
+.carrusel-pista > * {
+  flex: 0 0 clamp(240px, 78%, 340px);
+  scroll-snap-align: start;
+}
+
+/* difuminado a la derecha mientras queden tarjetas */
+.carrusel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46px;
+  bottom: 52px;
+  pointer-events: none;
+  background: linear-gradient(to right, transparent, var(--lona));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.carrusel.hay-mas::after { opacity: 1; }
+
+.carrusel-barra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.carrusel-flecha {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--celeste-claro);
+  background: var(--card);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+.carrusel-flecha:hover:not(:disabled) { background: var(--cielo); border-color: var(--celeste); }
+.carrusel-flecha:disabled { opacity: 0.35; cursor: default; }
+.carrusel-flecha svg {
+  width: 17px; height: 17px;
+  stroke: var(--celeste-hondo);
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.carrusel-puntos { display: flex; gap: 0.4rem; }
+
+.carrusel-punto {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--celeste-claro);
+  cursor: pointer;
+  transition: background 0.25s ease, width 0.25s ease;
+}
+.carrusel-punto.activo {
+  width: 26px;
+  border-radius: 999px;
+  background: var(--celeste);
+}
+
+/* las tarjetas del carrusel se estiran a la misma altura */
+.carrusel-pista .news-card,
+.carrusel-pista .socio-card {
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .carrusel-pista > * { flex-basis: 84%; }
+  .carrusel-flecha { display: none; }
 }
 
 /* ---------- Programa ---------- */
@@ -892,6 +979,12 @@ body {
   color: var(--tinta);
 }
 
+.carta-botones {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
 .carta-alergenos {
   margin: 0 0 1.1rem;
   padding-top: 0.8rem;
@@ -901,6 +994,11 @@ body {
 }
 
 /* enlace de vuelta en la página de la carta */
+.pagina-enlace {
+  margin: 1.4rem 0 0;
+  text-align: center;
+}
+
 .volver {
   display: inline-block;
   margin-bottom: 0.9rem;

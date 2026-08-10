@@ -1,11 +1,12 @@
 /* Service worker — cache básico para funcionar sin conexión */
 
-const CACHE = "informales-v49";
+const CACHE = "informales-v50";
 
 const PRECACHE = [
   "./",
   "index.html",
   "carta.html",
+  "pescaito.html",
   "css/styles.css",
   "js/app.js",
   "js/data.js",
@@ -56,7 +57,11 @@ self.addEventListener("fetch", (e) => {
             (r) =>
               r ||
               caches.match(
-                url.pathname.includes("carta") ? "carta.html" : "index.html"
+                url.pathname.includes("pescaito")
+                  ? "pescaito.html"
+                  : url.pathname.includes("carta")
+                    ? "carta.html"
+                    : "index.html"
               )
           )
         )

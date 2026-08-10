@@ -31,7 +31,7 @@ const SOCIOS = {
     texto:
       "Llévala puesta en todo momento: es lo que te acredita como socio dentro de la caseta.",
     imagen: "assets/pulsera.webp",
-    pie: "Así es la pulsera de este año, con el 5.º aniversario de la caseta.",
+    pie: "Así es la pulsera de este año, con el quinto aniversario de la caseta.",
   },
   puntos: [
     {
