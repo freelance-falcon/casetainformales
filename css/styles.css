@@ -1264,6 +1264,17 @@ a.sponsor-card:hover,
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .ficha-enlace:hover { background: var(--cielo); border-color: var(--celeste); }
+.ficha-dato {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--tinta-suave);
+}
+
+.ficha-dato svg,
 .ficha-enlace svg {
   width: 19px; height: 19px;
   flex-shrink: 0;

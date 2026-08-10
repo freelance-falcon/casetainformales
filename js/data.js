@@ -134,7 +134,28 @@ const PATROCINADORES = [
       ],
     },
   },
-  { nombre: "Grupo PR Palets", detalle: "", logo: "assets/patrocinadores/pr-palets.webp" },
+  {
+    nombre: "Grupo PR Palets",
+    detalle: "Palets y embalajes",
+    logo: "assets/patrocinadores/pr-palets.webp",
+    ficha: {
+      resumen:
+        "Soluciones logísticas integrales de palets y embalajes en Sevilla y Andalucía. Certificados en calidad (ISO 9001), medioambiente (ISO 14001) y seguridad laboral (ISO 45001).",
+      servicios: [
+        "Fabricación de palets a medida o estándar, embalajes, jaulas y plataformas.",
+        "Compra y recuperación de palets usados para su restauración.",
+        "Tratamiento térmico certificado NIMF-15 para exportación.",
+        "Transporte con flota propia, puerta a puerta.",
+        "Alquiler de cubas para residuos de madera y transformación en biomasa.",
+      ],
+      enlaces: [
+        { tipo: "web", texto: "grupoprpalets.es", url: "https://grupoprpalets.es/" },
+        { tipo: "tel", texto: "635 40 32 43", url: "tel:+34635403243" },
+        { tipo: "email", texto: "administracion@grupoprpalets.com.es", url: "mailto:administracion@grupoprpalets.com.es" },
+        { tipo: "horario", texto: "Lunes a viernes, 07:00–18:00" },
+      ],
+    },
+  },
   {
     nombre: "Secosum",
     detalle: "Seguridad y suministros medioambientales",
@@ -198,7 +219,20 @@ const PATROCINADORES = [
       ],
     },
   },
-  { nombre: "SABORes", detalle: "", logo: "assets/patrocinadores/sabores.webp" },
+  {
+    nombre: "SABORes La Algaba",
+    detalle: "Cocina y reservas · La Algaba",
+    logo: "assets/patrocinadores/sabores.webp",
+    ficha: {
+      resumen: "Buena mesa en La Algaba, en la calle Mercurio. Reserva por teléfono.",
+      servicios: [],
+      enlaces: [
+        { tipo: "mapa", texto: "C/ Mercurio, 29 · La Algaba", url: "https://maps.google.com/?q=Calle+Mercurio+29,+La+Algaba,+Sevilla" },
+        { tipo: "tel", texto: "613 66 86 67 · reservas", url: "tel:+34613668667" },
+        { tipo: "instagram", texto: "@sabores_laalgaba", url: "https://www.instagram.com/sabores_laalgaba" },
+      ],
+    },
+  },
   { nombre: "José A. Sevilla", detalle: "Construcciones y reformas", logo: "assets/patrocinadores/jose-sevilla.webp" },
   {
     nombre: "Andalucía Color",
@@ -239,6 +273,24 @@ const PATROCINADORES = [
       enlaces: [
         { tipo: "tel", texto: "685 24 96 08", url: "tel:+34685249608" },
         { tipo: "email", texto: "ifontdm@hotmail.com", url: "mailto:ifontdm@hotmail.com" },
+      ],
+    },
+  },
+  {
+    nombre: "AI Delfos",
+    detalle: "Software e inteligencia artificial",
+    logo: "assets/patrocinadores/aidelfos.webp",
+    ficha: {
+      resumen:
+        "Software e inteligencia artificial para la excelencia operativa. Digitalización nueva o mejora de la que ya tienes: primero rediseñamos el proceso y después lo automatizamos, con IA y sin IA.",
+      servicios: [
+        "Digitalización de procesos, desde cero o sobre lo que ya existe.",
+        "Rediseño del proceso antes de automatizarlo.",
+        "Automatización con y sin inteligencia artificial.",
+      ],
+      enlaces: [
+        { tipo: "web", texto: "aidelfos.com", url: "https://aidelfos.com" },
+        { tipo: "email", texto: "m.falcon@aidelfos.com", url: "mailto:m.falcon@aidelfos.com" },
       ],
     },
   },

@@ -370,6 +370,7 @@ const ICONOS_ENLACE = {
   email: '<svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.6 7 L12 13 L20.4 7"/></svg>',
   mapa: '<svg viewBox="0 0 24 24"><path d="M12 21 s7 -7.2 7 -12 a7 7 0 0 0 -14 0 c0 4.8 7 12 7 12 Z"/><circle cx="12" cy="9" r="2.6"/></svg>',
   instagram: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>',
+  horario: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5 V12 L15 14"/></svg>',
 };
 
 function iniciarFichas() {
@@ -388,14 +389,14 @@ function iniciarFichas() {
         : ""}
       ${f.enlaces && f.enlaces.length
         ? `<div class="ficha-enlaces">${f.enlaces
-            .map(
-              (e) =>
-                `<a class="ficha-enlace" href="${e.url}"${
-                  ["web", "linkedin", "instagram", "mapa"].includes(e.tipo)
-                    ? ' target="_blank" rel="noopener"'
-                    : ""
-                }>${ICONOS_ENLACE[e.tipo] || ""}<span>${e.texto}</span></a>`
-            )
+            .map((e) => {
+              const dentro = `${ICONOS_ENLACE[e.tipo] || ""}<span>${e.texto}</span>`;
+              if (!e.url) return `<p class="ficha-dato">${dentro}</p>`;
+              const fuera = ["web", "linkedin", "instagram", "mapa"].includes(e.tipo)
+                ? ' target="_blank" rel="noopener"'
+                : "";
+              return `<a class="ficha-enlace" href="${e.url}"${fuera}>${dentro}</a>`;
+            })
             .join("")}</div>`
         : ""}`;
     modal.hidden = false;
