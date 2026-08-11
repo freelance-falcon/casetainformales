@@ -348,7 +348,8 @@ function pintarPatrocinadores() {
       ${p.logo
         ? `<span class="sponsor-marco"><img class="sponsor-logo" src="${p.logo}" alt="${p.nombre}" loading="lazy" /></span>
            <span class="sponsor-nombre sr-only">${p.nombre}</span>`
-        : `<span class="sponsor-nombre">${p.nombre}</span>`}
+        : `<span class="sponsor-marco sponsor-marco--texto"><span class="sponsor-rotulo">${p.nombre}</span></span>
+           <span class="sponsor-nombre sr-only">${p.nombre}</span>`}
       ${p.detalle ? `<span class="sponsor-detalle">${p.detalle}</span>` : ""}`;
     if (p.ficha) {
       return `<button class="sponsor-card sponsor-card--ficha" data-ficha="${i}">

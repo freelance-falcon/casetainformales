@@ -1116,6 +1116,21 @@ a.sponsor-card:hover,
   margin-bottom: 0.55rem;
 }
 
+/* patrocinadores sin logotipo: rótulo tipográfico */
+.sponsor-marco--texto {
+  background: var(--cielo);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+}
+
+.sponsor-rotulo {
+  font-family: var(--fuente-display);
+  font-size: 1.15rem;
+  line-height: 1.15;
+  color: var(--celeste-hondo);
+  text-align: center;
+}
+
 .sponsor-logo {
   max-height: 100%;
   max-width: 100%;

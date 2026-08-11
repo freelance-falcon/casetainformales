@@ -332,6 +332,18 @@ const PATROCINADORES = [
     },
   },
   {
+    nombre: "No te preocupes",
+    detalle: "Bar · C/ Peligro, La Algaba",
+    ficha: {
+      resumen:
+        "Un bar de amigos y buen ambiente en la calle Peligro. De los de entrar a tomar una y quedarse.",
+      servicios: [],
+      enlaces: [
+        { tipo: "mapa", texto: "C/ Peligro · La Algaba", url: "https://maps.google.com/?q=Calle+Peligro,+La+Algaba,+Sevilla" },
+      ],
+    },
+  },
+  {
     nombre: "AI Delfos",
     detalle: "Software e inteligencia artificial",
     logo: "assets/patrocinadores/aidelfos.webp",
