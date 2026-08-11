@@ -92,7 +92,27 @@ const PATROCINADORES = [
       ],
     },
   },
-  { nombre: "Tu Mesa de Siempre", detalle: "Catering", logo: "assets/patrocinadores/tu-mesa.webp" },
+  {
+    nombre: "Tu Mesa de Siempre",
+    detalle: "Catering de ferias",
+    logo: "assets/patrocinadores/tu-mesa.webp",
+    ficha: {
+      resumen:
+        "Catering especialista en ferias andaluzas. Gestionan ocho casetas en la Feria de Sevilla —entre ellas la Caseta de Farmacia— y el catering de casetas y eventos institucionales en municipios de toda la provincia.",
+      servicios: [
+        "Cocina propia con cocineros cualificados y cadena de frío gestionada internamente.",
+        "Marisco fresco cocido a diario, pan de panadería y chacina cortada a cuchillo.",
+        "Repartos diarios para tener siempre el producto más fresco.",
+        "Plantilla permanente de 30 personas.",
+        "Seguro de responsabilidad civil de hasta 1.000.000 € y registro sanitario 26.0013356 S/E.",
+      ],
+      enlaces: [
+        { tipo: "web", texto: "cateringjoaquinjaen.com", url: "https://www.cateringjoaquinjaen.com" },
+        { tipo: "tel", texto: "611 078 337", url: "tel:+34611078337" },
+        { tipo: "email", texto: "info@cateringjoaquinjaen.com", url: "mailto:info@cateringjoaquinjaen.com" },
+      ],
+    },
+  },
   {
     nombre: "Hoyo10",
     detalle: "Café bar & copas · La Algaba",
@@ -199,7 +219,22 @@ const PATROCINADORES = [
       ],
     },
   },
-  { nombre: "Rufino", detalle: "", logo: "assets/patrocinadores/rufino.webp" },
+  {
+    nombre: "Rufino",
+    detalle: "Contratación de artistas y eventos",
+    logo: "assets/patrocinadores/rufino.webp",
+    ficha: {
+      resumen:
+        "Contratación de artistas y organización de eventos: quien pone la música y el espectáculo en ferias, casetas y celebraciones.",
+      servicios: [
+        "Contratación de artistas y grupos en directo.",
+        "Organización y producción de eventos.",
+      ],
+      enlaces: [
+        { tipo: "tel", texto: "618 71 40 29", url: "tel:+34618714029" },
+      ],
+    },
+  },
   {
     nombre: "Velázquez Coca",
     detalle: "Climatización y energía solar térmica",
@@ -234,7 +269,26 @@ const PATROCINADORES = [
       ],
     },
   },
-  { nombre: "José A. Sevilla", detalle: "Construcciones y reformas", logo: "assets/patrocinadores/jose-sevilla.webp" },
+  {
+    nombre: "José A. Sevilla",
+    detalle: "Construcciones y reformas",
+    logo: "assets/patrocinadores/jose-sevilla.webp",
+    ficha: {
+      resumen:
+        "Construcción y reformas integrales: obra nueva, rehabilitación y reformas de vivienda, con trato directo y presupuesto sin compromiso.",
+      servicios: [
+        "Reformas integrales de vivienda, cocinas y baños.",
+        "Obra nueva y ampliaciones.",
+        "Albañilería, solería y alicatado.",
+        "Fachadas, cubiertas e impermeabilizaciones.",
+        "Presupuesto sin compromiso.",
+      ],
+      enlaces: [
+        { tipo: "tel", texto: "615 96 37 60", url: "tel:+34615963760" },
+        { tipo: "tel", texto: "657 80 81 98", url: "tel:+34657808198" },
+      ],
+    },
+  },
   {
     nombre: "Andalucía Color",
     detalle: "Pinturas y decoración · La Algaba",
