@@ -332,6 +332,30 @@ const PATROCINADORES = [
     },
   },
   {
+    nombre: "Matrolo Pladur",
+    detalle: "Montaje de pladur · La Algaba",
+    logo: "assets/patrocinadores/matrolopladur.webp",
+    ficha: {
+      resumen:
+        "Montaje e instalación de pladur y yeso laminado con más de 20 años de experiencia, en viviendas, locales y oficinas.",
+      servicios: [
+        "Tabiques de pladur.",
+        "Trasdosados directos, semidirectos y autoportantes.",
+        "Falsos techos continuos y registrables, en yeso laminado y escayola.",
+        "Aislamientos acústicos entre estancias.",
+        "Aislamientos térmicos para mayor eficiencia y confort.",
+        "Muebles de pladur a medida: estanterías y mobiliario.",
+      ],
+      enlaces: [
+        { tipo: "web", texto: "matrolopladur.com", url: "https://matrolopladur.com/" },
+        { tipo: "mapa", texto: "C/ Amapola, 19 · La Algaba", url: "https://maps.google.com/?q=Calle+Amapola+19,+41980+La+Algaba,+Sevilla" },
+        { tipo: "tel", texto: "624 14 19 36", url: "tel:+34624141936" },
+        { tipo: "email", texto: "info@matrolopladur.com", url: "mailto:info@matrolopladur.com" },
+        { tipo: "instagram", texto: "@instalaciones_matrolo", url: "https://www.instagram.com/instalaciones_matrolo" },
+      ],
+    },
+  },
+  {
     nombre: "No te preocupes",
     detalle: "Bar · C/ Peligro, La Algaba",
     ficha: {
