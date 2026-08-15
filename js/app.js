@@ -372,6 +372,7 @@ const ICONOS_ENLACE = {
   mapa: '<svg viewBox="0 0 24 24"><path d="M12 21 s7 -7.2 7 -12 a7 7 0 0 0 -14 0 c0 4.8 7 12 7 12 Z"/><circle cx="12" cy="9" r="2.6"/></svg>',
   instagram: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>',
   horario: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5 V12 L15 14"/></svg>',
+  whatsapp: '<svg viewBox="0 0 24 24"><path d="M3.5 20.5 L5 16.4 A8.4 8.4 0 1 1 8.2 19.4 Z"/><path d="M9 9.2 c0 3 2.8 5.8 5.8 5.8 c0.9 0 1.5 -0.6 1.5 -1.3 l-1.9 -0.9 l-1 1 a7 7 0 0 1 -2.6 -2.6 l1 -1 l-0.9 -1.9 c-0.7 0 -1.3 0.6 -1.3 1.5 Z"/></svg>',
 };
 
 function iniciarFichas() {
@@ -393,7 +394,7 @@ function iniciarFichas() {
             .map((e) => {
               const dentro = `${ICONOS_ENLACE[e.tipo] || ""}<span>${e.texto}</span>`;
               if (!e.url) return `<p class="ficha-dato">${dentro}</p>`;
-              const fuera = ["web", "linkedin", "instagram", "mapa"].includes(e.tipo)
+              const fuera = ["web", "linkedin", "instagram", "mapa", "whatsapp"].includes(e.tipo)
                 ? ' target="_blank" rel="noopener"'
                 : "";
               return `<a class="ficha-enlace" href="${e.url}"${fuera}>${dentro}</a>`;

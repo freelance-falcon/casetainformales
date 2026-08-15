@@ -332,6 +332,25 @@ const PATROCINADORES = [
     },
   },
   {
+    nombre: "SaMatel",
+    detalle: "Construcciones y reformas",
+    logo: "assets/patrocinadores/samatel.webp",
+    ficha: {
+      resumen:
+        "Construcciones y reformas con todos los oficios cubiertos: de la albañilería a la electricidad, sin tener que buscar a nadie más.",
+      servicios: [
+        "Albañilería.",
+        "Fontanería.",
+        "Yeso y perlita.",
+        "Electricidad.",
+      ],
+      enlaces: [
+        { tipo: "tel", texto: "600 093 392", url: "tel:+34600093392" },
+        { tipo: "whatsapp", texto: "WhatsApp", url: "https://wa.me/34600093392" },
+      ],
+    },
+  },
+  {
     nombre: "Matrolo Pladur",
     detalle: "Montaje de pladur · La Algaba",
     logo: "assets/patrocinadores/matrolopladur.webp",
