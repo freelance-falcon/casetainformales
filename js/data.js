@@ -434,6 +434,7 @@ const PROGRAMA = [
     eventos: [
       { hora: "22:30", nombre: "Cena de pescaíto · José Antonio Sabin", tipo: "comida", cartel: "assets/carteles/sabin.webp", instagram: "https://www.instagram.com/jose_antonio_sabin" },
       { hora: "00:30", nombre: "Las Zarzanas", tipo: "directo", cartel: "assets/carteles/zarzanas.webp", instagram: "https://www.instagram.com/laszarzanas_oficial" },
+      { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
     ],
   },
   {
@@ -443,6 +444,7 @@ const PROGRAMA = [
       { hora: "17:30", nombre: "Malakay Music", tipo: "directo", cartel: "assets/carteles/malakay.webp", instagram: "https://www.instagram.com/malakay_music" },
       { hora: "20:00", nombre: "Caty Ocaña", tipo: "directo", cartel: "assets/carteles/caty-ocana.webp", instagram: "https://www.instagram.com/catyocana_oficial" },
       { hora: "00:30", nombre: "Grupo Magustami", tipo: "directo", cartel: "assets/carteles/magustami.webp", instagram: "https://www.instagram.com/magustami.oficial" },
+      { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
     ],
   },
   {
@@ -452,6 +454,7 @@ const PROGRAMA = [
       { hora: "17:30", nombre: "Ángela Antúnez", tipo: "directo", cartel: "assets/carteles/angela-antunez.webp", instagram: "https://www.instagram.com/angieaoficial" },
       { hora: "20:00", nombre: "Amoloys Music Live", tipo: "directo", cartel: "assets/carteles/amoloys.webp", instagram: "https://www.instagram.com/amoloyss" },
       { hora: "01:00", nombre: "Niño Brasas", tipo: "directo", cartel: "assets/carteles/nino-brasas.webp", instagram: "https://www.instagram.com/elninobrasas" },
+      { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
     ],
   },
   {
@@ -461,6 +464,7 @@ const PROGRAMA = [
       { hora: "17:30", nombre: "Grupo Kimbala", tipo: "directo", cartel: "assets/carteles/kimbala.webp", instagram: "https://www.instagram.com/grupokimbala" },
       { hora: "20:00", nombre: "Nando Sanz & Los Malafama", tipo: "directo", cartel: "assets/carteles/nando-sanz.webp", instagram: "https://www.instagram.com/fernandosanzoficial" },
       { hora: "01:00", nombre: "Nikelao Flamenco", tipo: "directo", cartel: "assets/carteles/nikelao.webp", instagram: "https://www.instagram.com/nikelaoflamenco" },
+      { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
     ],
   },
   {
@@ -468,6 +472,7 @@ const PROGRAMA = [
     fecha: "2026-09-20",
     eventos: [
       { hora: "16:30", nombre: "Josemi Carrasco", tipo: "directo", cartel: "assets/carteles/josemi-carrasco.webp", instagram: "https://www.instagram.com/josemi_carrasco" },
+      { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
     ],
   },
 ];
