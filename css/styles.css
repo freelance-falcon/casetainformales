@@ -703,6 +703,30 @@ body {
 .event-cartel:hover { background: var(--cielo); border-color: var(--celeste); }
 .event-cartel:active { transform: scale(0.94); }
 
+.event-insta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1.5px solid var(--celeste-claro);
+  background: var(--card);
+  color: var(--celeste-hondo);
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.event-insta:hover { background: var(--cielo); border-color: var(--celeste); }
+.event-insta:active { transform: scale(0.92); }
+.event-insta svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
 .dia-vacio { margin: 0.4rem 0.25rem; color: var(--tinta-suave); }
 
 .event-type {
@@ -737,6 +761,7 @@ body {
     gap: 0.4rem;
   }
   .event-cartel { padding: 0.3rem 0.65rem; }
+  .event-insta { width: 30px; height: 30px; }
 }
 
 /* ---------- Lightbox de carteles ---------- */

@@ -432,42 +432,42 @@ const PROGRAMA = [
     dia: "Miércoles 16",
     fecha: "2026-09-16",
     eventos: [
-      { hora: "22:30", nombre: "Cena de pescaíto · José Antonio Sabin", tipo: "comida", cartel: "assets/carteles/sabin.webp" },
-      { hora: "00:30", nombre: "Las Zarzanas", tipo: "directo", cartel: "assets/carteles/zarzanas.webp" },
+      { hora: "22:30", nombre: "Cena de pescaíto · José Antonio Sabin", tipo: "comida", cartel: "assets/carteles/sabin.webp", instagram: "https://www.instagram.com/jose_antonio_sabin" },
+      { hora: "00:30", nombre: "Las Zarzanas", tipo: "directo", cartel: "assets/carteles/zarzanas.webp", instagram: "https://www.instagram.com/laszarzanas_oficial" },
     ],
   },
   {
     dia: "Jueves 17",
     fecha: "2026-09-17",
     eventos: [
-      { hora: "17:30", nombre: "Malakay Music", tipo: "directo", cartel: "assets/carteles/malakay.webp" },
-      { hora: "20:00", nombre: "Caty Ocaña", tipo: "directo", cartel: "assets/carteles/caty-ocana.webp" },
-      { hora: "00:30", nombre: "Grupo Magustami", tipo: "directo", cartel: "assets/carteles/magustami.webp" },
+      { hora: "17:30", nombre: "Malakay Music", tipo: "directo", cartel: "assets/carteles/malakay.webp", instagram: "https://www.instagram.com/malakay_music" },
+      { hora: "20:00", nombre: "Caty Ocaña", tipo: "directo", cartel: "assets/carteles/caty-ocana.webp", instagram: "https://www.instagram.com/catyocana_oficial" },
+      { hora: "00:30", nombre: "Grupo Magustami", tipo: "directo", cartel: "assets/carteles/magustami.webp", instagram: "https://www.instagram.com/magustami.oficial" },
     ],
   },
   {
     dia: "Viernes 18",
     fecha: "2026-09-18",
     eventos: [
-      { hora: "17:30", nombre: "Ángela Antúnez", tipo: "directo", cartel: "assets/carteles/angela-antunez.webp" },
-      { hora: "20:00", nombre: "Amoloys Music Live", tipo: "directo", cartel: "assets/carteles/amoloys.webp" },
-      { hora: "01:00", nombre: "Niño Brasas", tipo: "directo", cartel: "assets/carteles/nino-brasas.webp" },
+      { hora: "17:30", nombre: "Ángela Antúnez", tipo: "directo", cartel: "assets/carteles/angela-antunez.webp", instagram: "https://www.instagram.com/angieaoficial" },
+      { hora: "20:00", nombre: "Amoloys Music Live", tipo: "directo", cartel: "assets/carteles/amoloys.webp", instagram: "https://www.instagram.com/amoloyss" },
+      { hora: "01:00", nombre: "Niño Brasas", tipo: "directo", cartel: "assets/carteles/nino-brasas.webp", instagram: "https://www.instagram.com/elninobrasas" },
     ],
   },
   {
     dia: "Sábado 19",
     fecha: "2026-09-19",
     eventos: [
-      { hora: "17:30", nombre: "Grupo Kimbala", tipo: "directo", cartel: "assets/carteles/kimbala.webp" },
-      { hora: "20:00", nombre: "Nando Sanz & Los Malafama", tipo: "directo", cartel: "assets/carteles/nando-sanz.webp" },
-      { hora: "01:00", nombre: "Nikelao Flamenco", tipo: "directo", cartel: "assets/carteles/nikelao.webp" },
+      { hora: "17:30", nombre: "Grupo Kimbala", tipo: "directo", cartel: "assets/carteles/kimbala.webp", instagram: "https://www.instagram.com/grupokimbala" },
+      { hora: "20:00", nombre: "Nando Sanz & Los Malafama", tipo: "directo", cartel: "assets/carteles/nando-sanz.webp", instagram: "https://www.instagram.com/fernandosanzoficial" },
+      { hora: "01:00", nombre: "Nikelao Flamenco", tipo: "directo", cartel: "assets/carteles/nikelao.webp", instagram: "https://www.instagram.com/nikelaoflamenco" },
     ],
   },
   {
     dia: "Domingo 20",
     fecha: "2026-09-20",
     eventos: [
-      { hora: "16:30", nombre: "Josemi Carrasco", tipo: "directo", cartel: "assets/carteles/josemi-carrasco.webp" },
+      { hora: "16:30", nombre: "Josemi Carrasco", tipo: "directo", cartel: "assets/carteles/josemi-carrasco.webp", instagram: "https://www.instagram.com/josemi_carrasco" },
     ],
   },
 ];

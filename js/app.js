@@ -217,11 +217,16 @@ function pintarPrograma() {
           const btnCartel = e.cartel
             ? `<button class="event-cartel" data-cartel="${e.cartel}" aria-label="Ver cartel de ${e.nombre}">Cartel</button>`
             : "";
+          const btnInsta = e.instagram
+            ? `<a class="event-insta" href="${e.instagram}" target="_blank" rel="noopener" aria-label="Instagram de ${e.nombre}">
+                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+               </a>`
+            : "";
           return `
       <div class="event-row${clase}">
         <span class="event-time">${e.hora}</span>
         <span class="event-name">${e.nombre}</span>
-        <span class="event-extra">${btnCartel}<span class="event-type ${e.tipo}">${e.tipo}</span></span>
+        <span class="event-extra">${btnInsta}${btnCartel}<span class="event-type ${e.tipo}">${e.tipo}</span></span>
       </div>`;
         })
         .join("") || '<p class="dia-vacio">Sin actuaciones anunciadas este día… de momento 😉</p>';
