@@ -472,7 +472,6 @@ const PROGRAMA = [
     fecha: "2026-09-20",
     eventos: [
       { hora: "16:30", nombre: "Josemi Carrasco", tipo: "directo", cartel: "assets/carteles/josemi-carrasco.webp", instagram: "https://www.instagram.com/josemi_carrasco" },
-      { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
     ],
   },
 ];
