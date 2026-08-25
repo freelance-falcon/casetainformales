@@ -462,7 +462,7 @@ const PROGRAMA = [
     fecha: "2026-09-19",
     eventos: [
       { hora: "17:30", nombre: "Grupo Kimbala", tipo: "directo", cartel: "assets/carteles/kimbala.webp", instagram: "https://www.instagram.com/grupokimbala" },
-      { hora: "20:00", nombre: "Nando Sanz & Los Malafama", tipo: "directo", cartel: "assets/carteles/nando-sanz.webp", instagram: "https://www.instagram.com/fernandosanzoficial" },
+      { hora: "20:00", nombre: "Fernando Sanz & Los Malafama", tipo: "directo", cartel: "assets/carteles/nando-sanz.webp", instagram: "https://www.instagram.com/fernandosanzoficial" },
       { hora: "01:00", nombre: "Nikelao Flamenco", tipo: "directo", cartel: "assets/carteles/nikelao.webp", instagram: "https://www.instagram.com/nikelaoflamenco" },
       { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
     ],
@@ -475,6 +475,13 @@ const PROGRAMA = [
     ],
   },
 ];
+
+/* Empresa que gestiona el sonido de las actuaciones */
+const SONIDO = {
+  nombre: "Input Audiovisuales",
+  texto: "Sonido e iluminación de las actuaciones a cargo de",
+  instagram: "https://www.instagram.com/input.audiovisuales",
+};
 
 /* Carta de la caseta y menú de la cena del pescaíto (catering Tu Mesa de Siempre) */
 const ALERGENOS = {
