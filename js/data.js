@@ -436,7 +436,7 @@ const PROGRAMA = [
       { hora: "22:30", nombre: "Fuegos artificiales · inauguración de la feria", tipo: "acto" },
       { hora: "00:30", nombre: "Las Zarzanas", tipo: "directo", cartel: "assets/carteles/zarzanas.webp", instagram: "https://www.instagram.com/laszarzanas_oficial" },
       { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
-      { hora: "05:00", nombre: "Cierre de la caseta", tipo: "cierre" },
+      { hora: "05:00", nombre: "Fin de música", tipo: "cierre" },
     ],
   },
   {
@@ -447,7 +447,7 @@ const PROGRAMA = [
       { hora: "20:00", nombre: "Caty Ocaña", tipo: "directo", cartel: "assets/carteles/caty-ocana.webp", instagram: "https://www.instagram.com/catyocana_oficial" },
       { hora: "00:30", nombre: "Grupo Magustami", tipo: "directo", cartel: "assets/carteles/magustami.webp", instagram: "https://www.instagram.com/magustami.oficial" },
       { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
-      { hora: "05:00", nombre: "Cierre de la caseta", tipo: "cierre" },
+      { hora: "05:00", nombre: "Fin de música", tipo: "cierre" },
     ],
   },
   {
@@ -458,7 +458,7 @@ const PROGRAMA = [
       { hora: "20:00", nombre: "Amoloys Music Live", tipo: "directo", cartel: "assets/carteles/amoloys.webp", instagram: "https://www.instagram.com/amoloyss" },
       { hora: "01:00", nombre: "Niño Brasas", tipo: "directo", cartel: "assets/carteles/nino-brasas.webp", instagram: "https://www.instagram.com/elninobrasas" },
       { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
-      { hora: "06:00", nombre: "Cierre de la caseta", tipo: "cierre" },
+      { hora: "06:00", nombre: "Fin de música", tipo: "cierre" },
     ],
   },
   {
@@ -469,7 +469,7 @@ const PROGRAMA = [
       { hora: "20:00", nombre: "Fernando Sanz & Los Malafama", tipo: "directo", cartel: "assets/carteles/nando-sanz.webp", instagram: "https://www.instagram.com/fernandosanzoficial" },
       { hora: "01:00", nombre: "Nikelao Flamenco", tipo: "directo", cartel: "assets/carteles/nikelao.webp", instagram: "https://www.instagram.com/nikelaoflamenco" },
       { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
-      { hora: "06:00", nombre: "Cierre de la caseta", tipo: "cierre" },
+      { hora: "06:00", nombre: "Fin de música", tipo: "cierre" },
     ],
   },
   {
