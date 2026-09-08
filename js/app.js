@@ -191,13 +191,14 @@ function pintarPrograma() {
     const dia = PROGRAMA[seleccionado];
 
     // si es hoy: atenúa lo ya pasado y destaca lo siguiente
-    // (horas < 06:00 cuentan como madrugada del día siguiente)
+    // (hasta las 08:00 cuenta como madrugada del día siguiente,
+    //  para que entren los cierres de las 05:00 y las 06:00)
     const esHoy = dia.fecha === hoy;
     const ahora = new Date();
     const minutosAhora = ahora.getHours() * 60 + ahora.getMinutes();
     const minutos = (hora) => {
       const [h, m] = hora.split(":").map(Number);
-      return h < 6 ? (h + 24) * 60 + m : h * 60 + m;
+      return h < 8 ? (h + 24) * 60 + m : h * 60 + m;
     };
     let siguienteIdx = -1;
     if (esHoy) {
@@ -222,11 +223,12 @@ function pintarPrograma() {
                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
                </a>`
             : "";
+          if (e.tipo === "cierre") clase += " fin-dia";
           return `
       <div class="event-row${clase}">
         <span class="event-time">${e.hora}</span>
         <span class="event-name">${e.nombre}</span>
-        <span class="event-extra">${btnInsta}${btnCartel}<span class="event-type ${e.tipo}">${e.tipo}</span></span>
+        <span class="event-extra">${btnInsta}${btnCartel}<span class="event-type ${e.tipo}">${e.tipo === "cierre" ? "fin" : e.tipo}</span></span>
       </div>`;
         })
         .join("") || '<p class="dia-vacio">Sin actuaciones anunciadas este día… de momento 😉</p>';

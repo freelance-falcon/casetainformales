@@ -742,6 +742,11 @@ body {
 .event-type.dj      { background: #efe9fd; color: #7c5cd6; }
 .event-type.comida  { background: #eaf7e6; color: #4d9b3c; }
 .event-type.acto    { background: var(--cielo); color: var(--celeste-hondo); }
+.event-type.cierre  { background: #eef1f3; color: var(--tinta-suave); }
+
+/* la hora de cierre acompaña, no compite con las actuaciones */
+.event-row.fin-dia { opacity: 0.62; }
+.event-row.fin-dia .event-time { color: var(--tinta-suave); }
 
 @media (max-width: 480px) {
   .day-panel { padding: 1rem; }
