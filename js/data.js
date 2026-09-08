@@ -432,8 +432,8 @@ const PROGRAMA = [
     dia: "Miércoles 16",
     fecha: "2026-09-16",
     eventos: [
-      { hora: "22:15", nombre: "Cena de pescaíto · José Antonio Sabin", tipo: "comida", cartel: "assets/carteles/sabin.webp", instagram: "https://www.instagram.com/jose_antonio_sabin" },
       { hora: "22:30", nombre: "Fuegos artificiales · inauguración de la feria", tipo: "acto" },
+      { hora: "22:45", nombre: "Cena de pescaíto · José Antonio Sabin", tipo: "comida", cartel: "assets/carteles/sabin.webp", instagram: "https://www.instagram.com/jose_antonio_sabin" },
       { hora: "00:30", nombre: "Las Zarzanas", tipo: "directo", cartel: "assets/carteles/zarzanas.webp", instagram: "https://www.instagram.com/laszarzanas_oficial" },
       { hora: "02:30", nombre: "DJ Juan Bautista", tipo: "dj", cartel: "assets/carteles/juan-bautista.webp", instagram: "https://www.instagram.com/juanbautistadj_" },
       { hora: "05:00", nombre: "Fin de música", tipo: "cierre" },
@@ -563,8 +563,8 @@ const MENU = {
     precio: "30 € por persona",
     horario: [
       { hora: "22:00", texto: "Copa de bienvenida" },
-      { hora: "22:15", texto: "Comienza la cena" },
       { hora: "22:30", texto: "Fuegos artificiales" },
+      { hora: "22:45", texto: "Comienza la cena" },
     ],
     infantil: "Menú infantil (hasta 12 años): lagrimitas, croquetas y hamburguesa con patatas + postre + bebida ilimitada — 15 €",
     bloques: [
